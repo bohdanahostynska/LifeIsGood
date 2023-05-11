@@ -1,14 +1,29 @@
-import { Routes, Route, NavLink } from "react-router-dom";
+import { Routes, Route, NavLink, Navigate } from "react-router-dom";
 import MenuProducts from "./components/MenuProducts";
 import React from "react";
-// import FormPage from "./pages/FormPage";
+import Auth from "./components/Auth";
+import Register from "./components/Register";
+import Home from "./components/Home";
+import { AuthContext } from "./context/AuthContext";
 
 const links = [
-  { id: "1", link: "/", name: "MenuProducts" },
-  // { id: "2", link: "your_cards", name: "YourCards" },
+  { id: "1", link: "/", name: "Home" },
+  { id: "2", link: "register", name: "Register" },
+  { id: "3", link: "login", name: "Auth" },
+  { id: "4", link: "menu", name: "MenuProducts" },
 ];
 
+const PrivateRoute = ({ children }) => {
+  let { currentUser } = React.useContext(AuthContext);
+  if (currentUser === null) {
+    return <Navigate to="/register" />;
+  }
+
+  return children;
+};
+
 const RouterApp = () => {
+  const { currentUser } = React.useContext(AuthContext);
   return (
     <div className="container">
       <nav className="header-nav">
@@ -30,8 +45,22 @@ const RouterApp = () => {
           ))}
         </ul>
         <Routes>
-          <Route path="/" element={<MenuProducts />} />
-          {/* <Route path="your_cards" element={<YourCards />} /> */}
+          <Route
+            path="/"
+            element={
+              <PrivateRoute>
+                <Home />
+              </PrivateRoute>
+            }
+          />
+          <Route path="/register" element={<Register />} />
+          <Route
+            path="/login"
+            element={currentUser ? <Navigate to="/" /> : <Auth />}
+          />
+          <Route path="/menu" element={<MenuProducts />} />
+
+          <Route path="*" element={<Navigate to="/register" />} />
         </Routes>
       </nav>
     </div>

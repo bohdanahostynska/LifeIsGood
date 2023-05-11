@@ -10,19 +10,19 @@
 
         &--active {
             background: rgb(103, 44, 44);
+            width: 150px;
+            .menu {
+                &__icon {
+                    background: rgb(140, 48, 48);
 
-            // .menu {
-            //     &__icon {
-            //         background: rgb(140, 48, 48);
-
-            //         &:before {
-            //             background: white;
-            //         }
-            //     }
-            //     &__title {
-            //         color: rgb(0, 129, 129);
-            //     }
-            // }
+                    &:before {
+                        background: white;
+                    }
+                }
+                &__title {
+                    color: rgb(0, 129, 129);
+                }
+            }
         }
 
         &:last-child {

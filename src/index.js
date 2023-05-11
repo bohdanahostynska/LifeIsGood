@@ -4,15 +4,15 @@ import ReactDOM from "react-dom/client";
 // import "./MenuScss.scss";
 import RouterApp from "./RouterApp";
 import { BrowserRouter as Router } from "react-router-dom";
-import { DataContext } from "../src/context/CardsContext";
+import { AuthProvider } from "../src/context/AuthContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
-      <DataContext>
+      <AuthProvider>
         <RouterApp />
-      </DataContext>
+      </AuthProvider>
     </Router>
   </React.StrictMode>
 );
