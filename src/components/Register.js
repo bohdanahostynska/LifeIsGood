@@ -1,11 +1,20 @@
 import React from "react";
+import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import Input from "./Input";
-import { auth } from "../firebaseConfig";
 import { useInput } from "../hooks/useInput";
 import { useNav } from "../context/useNav";
 
-// const auth = getAuth();
+const firebaseConfig = {
+  apiKey: "AIzaSyBqYcSM4n10pbVGbLdVpv-7XnADXY38B9Y",
+  authDomain: "diploma-project-62ade.firebaseapp.com",
+  projectId: "diploma-project-62ade",
+  storageBucket: "diploma-project-62ade.appspot.com",
+  messagingSenderId: "801287747770",
+  appId: "1:801287747770:web:2ea25ecce282ca89b82a83",
+};
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
 function Register() {
   const email = useInput();
