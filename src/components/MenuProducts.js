@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import classnames from "classnames";
 import "../MenuScss.scss";
 import UserItem from "./UserItem";
-import RunningGuy from "./RunningGuy";
+import DeliveryGuy from "./DeliveryGuy";
+import Home from "./Home";
+import MainPage from "./MainPage";
 
 const menuList = [
   {
@@ -50,8 +52,9 @@ export const MenuProducts = () => {
               ))}
             </ul>
           </nav>
-          <RunningGuy />
+          <DeliveryGuy />
         </div>
+        <MainPage />
       </div>
     </div>
   );

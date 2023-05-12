@@ -1,11 +1,11 @@
 import React from "react";
-import Guy from "../assets/menu/guy.svg";
+import Delguy from "../assets/menu/delguy.svg";
 import Arrow from "../assets/menu/arrow.svg";
 
-function RunningGuy() {
+function DeliveryGuy() {
   return (
     <div className="guy">
-      <img className="guy_item" src={Guy} alt="guy" />
+      <img className="guy_item" src={Delguy} alt="guy" />
       <h2 className="guy_title">Faster delivery!</h2>
       <div className="guy_know_more">
         <p className="guy_text">Know More</p>
@@ -15,4 +15,4 @@ function RunningGuy() {
   );
 }
 
-export default RunningGuy;
+export default DeliveryGuy;
