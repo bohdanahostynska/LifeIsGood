@@ -24,9 +24,9 @@ function Register() {
   const { goTo } = useNav();
 
   const handleRegister = async (event) => {
-    //event.prevent.Default();
-    ///відключила, бо вибивало помилку і не перекидало на сторінку /login
-    if (pass.value.trip() !== secondPass.value.trim()) return;
+    event.preventDefault();
+
+    if (pass.value.trim() !== secondPass.value.trim()) return;
     try {
       await createUserWithEmailAndPassword(auth, email.value, pass.value);
 

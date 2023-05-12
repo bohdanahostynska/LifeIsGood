@@ -1,55 +1,105 @@
-.menu {
-    width: 185px;
-    $white: #e22e2e;
-    &__item {
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    .wrapper {
         display: flex;
-        align-items: center;
-        border-radius: 15px;
+        flex-direction: row;
+        background-color: #deebfb;
+        border-radius: 60px;
 
-        margin-bottom: 45px;
+        .features {
+            margin-left: 50px;
+            padding-bottom: 50px;
+            padding-top: 70px;
 
-        &--active {
-            background: rgb(103, 44, 44);
-            width: 150px;
+            .user_wrapper {
+                align-items: center;
+                display: flex;
+                padding: 20px 0 20px 30px;
+                justify-content: center;
+                flex-direction: column;
+                margin-bottom: 50px;
+
+                &_img {
+                    display: block;
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 15px;
+                    background-color: #fff;
+                    justify-content: center;
+                    position: relative;
+                    &_img-img {
+                        position: absolute;
+                        left: 10px;
+                        top: 8px;
+                    }
+                }
+            }
             .menu {
+                width: 185px;
+                $white: #e22e2e;
+                &__item {
+                    display: flex;
+                    align-items: center;
+                    border-radius: 15px;
+
+                    margin-bottom: 45px;
+
+                    &--active {
+                        background: rgb(103, 44, 44);
+                        width: 150px;
+                        .menu {
+                            &__icon {
+                                background: rgb(140, 48, 48);
+
+                                &:before {
+                                    background: white;
+                                }
+                            }
+                            &__title {
+                                color: rgb(0, 129, 129);
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
                 &__icon {
-                    background: rgb(140, 48, 48);
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 46px;
+                    height: 44px;
+
+                    border-radius: 15px;
+                    background: rgb(174, 48, 48);
+                    margin-right: 45px;
 
                     &:before {
-                        background: white;
+                        content: "";
+                        display: inline-block;
+                        height: 15px;
+                        width: 15px;
+                        background: rgb(179, 179, 213);
                     }
                 }
                 &__title {
-                    color: rgb(0, 129, 129);
+                    color: black;
+                }
+            }
+
+            .guy {
+                display: inline-block;
+                &_know_more {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
                 }
             }
         }
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-    &__icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 46px;
-        height: 44px;
-
-        border-radius: 15px;
-        background: rgb(174, 48, 48);
-        margin-right: 45px;
-
-        &:before {
-            content: "";
-            display: inline-block;
-            height: 15px;
-            width: 15px;
-            background: rgb(179, 179, 213);
-        }
-    }
-    &__title {
-        color: black;
     }
 }
