@@ -2,6 +2,7 @@ import React from "react";
 import Drooling from "../assets/menu/drooling-face.svg";
 import MainOptions from "./MainOptions";
 import AllItems from "./AllItems";
+import "../styles/MainPage.scss";
 
 function MainPage() {
   return (

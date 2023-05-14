@@ -6,6 +6,7 @@ import DeliveryGuy from "./DeliveryGuy";
 import Home from "./Home";
 import MainPage from "./MainPage";
 import Articles from "./Arlicles";
+import "../styles/MenuProducts.scss";
 
 const menuList = [
   {

@@ -2,6 +2,7 @@ import React from "react";
 import Burger from "../assets/menu/all_pic/burger (2).svg";
 import Butter from "../assets/menu/all_pic//butterchicken.svg";
 import Salmon from "../assets/menu/all_pic/salmon.svg";
+import "../styles/AllItems.scss";
 import Pizza from "../assets/menu/all_pic/pizza2.jpg";
 import Dessert from "../assets/menu/all_pic/icecream.jpg";
 import Coffee from "../assets/menu/all_pic/coffee.jpg";
