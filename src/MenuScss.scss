@@ -310,7 +310,103 @@
         font-size: 14px;
         line-height: 16px;
       }
+      .articles_top {
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+      }
+
+      .articles_title {
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 27px;
+      }
+
+      .img_cont {
+        width: 50px;
+        height: 50px;
+        margin-right: 50px;
+        margin-top: 20px;
+      }
+
+      .articles_arr {
+        background-color: #f5f6f7;
+        border-radius: 5px;
+        padding: 20px;
+      }
+      .articles_wrap {
+        display: flex;
+        align-items: start;
+        width: 300px;
+      }
+      .articles_text-p {
+        color: black;
+        font-weight: 700;
+        width:195px;
+        margin-bottom: 0;
+      }
+
+      .articles_image{
+       margin-left: 10px;
+
+      }
+      .articles_right{
+        margin-left: 10px;
+      }
+
+      .articles_icon_chicken{
+        width: 50px;
+        height: 50px;
+        border-radius: 15px;
+        padding-top: 10px;
+        padding-left: 10px;
+        background: #FFF0A5;
+        margin-top: 18px;
+                
+      }
+      .articles_icon_face{
+        width: 50px;
+        height: 50px;
+        border-radius: 15px;
+        padding-top: 10px;
+        padding-left: 10px;
+        background: #D6F5FF;
+        margin-top: 18px;
+      }
+      .articles_icon_cookies{
+        width: 50px;
+        height: 50px;
+        border-radius: 15px;
+        padding-top: 10px;
+        padding-left: 10px;
+        background: #fedcee;
+        margin-top: 18px;
+        
+      }
+      .articles_icon_pizza{
+        width: 50px;
+        height: 50px;
+        border-radius: 15px;
+        padding-top: 10px;
+        padding-left: 10px;
+        background: #C1FFF4;
+        margin-top: 18px;
+      }
+      .articles_feedback{
+        display: flex;
+      }
+      .articles_like_wrap{
+        display: flex;
+        background: #fedcee;
+        border-radius: 15px;
+        width: 55px;
+        height:23px;
+      }
+      .articles_numb{
+        display: inline-block;
+        margin-bottom: 20px;
+        margin-top: 0;
+      }
     }
   }
 }
-// }

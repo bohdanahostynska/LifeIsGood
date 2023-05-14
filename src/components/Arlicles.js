@@ -35,56 +35,99 @@ function Arlicles() {
       <div className="articles_main">
         <div className="articles_top">
           <h4 className="articles_title">Articles</h4>
-          <img className="articles_arr" src={Arrow} alt="arr" />
+          <div className="img_cont">
+            <img className="articles_arr" src={Arrow} alt="arr" />
+          </div>
         </div>
         <div className="articles_bottom">
-          <div className="articles_left">
-            <div className="articles_image">
-              <img className="articles_icon" src={Chicken} alt="icon" />
+          <div className="articles_wrap">
+            <div className="articles_left">
+              <div className="articles_image">
+                <img
+                  className="articles_icon_chicken"
+                  src={Chicken}
+                  alt="icon"
+                />
+              </div>
+            </div>
+            <div className="articles_right">
+              <p className="articles_text-p">
+                How to cook turkey on Natural Gas{" "}
+              </p>
+              <div className="articles_feedback">
+                <img className="article_pic" src={Girl} alt="pic" />
+                <img className="articles_pic" src={Guy} alt="secpic" />
+                <div className="articles_like_wrap">
+                  <img className="article_like" src={Like} alt="like" />
+                  <p className="articles_numb">28+</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="articles_right">
-            <p className="articles_text"></p>
-            <img className="artlicle_pic" src={Girl} alt="pic" />
-            <img className="articles_sec_pic" src={Guy} alt="secpic" />
-            <img className="article_like" src={Like} alt="like" />
-            <p>28+</p>
-          </div>
-          <div className="articles_left">
-            <div className="articles_image">
-              <img className="articles_icon" src={Face} alt="icon" />
+          <div className="articles_wrap">
+            <div className="articles_left">
+              <div className="articles_image">
+                <img className="articles_icon_face" src={Face} alt="icon" />
+              </div>
+            </div>
+            <div className="articles_right">
+              <p className="articles_text-p">
+                Corona virus update: 3,43,287+ cases
+              </p>
+              <div className="articles_feedback">
+                <img className="artticle_pic" src={Girl2} alt="pic" />
+                <img className="articles__pic" src={Guy} alt="secpic" />
+                <div className="articles_like_wrap">
+                  <img className="article_like" src={Like} alt="like" />
+                  <p className="articles_numb">20+</p>{" "}
+                </div>
+              </div>
             </div>
           </div>
-          <div className="articles_right">
-            <p className="articles_text"></p>
-            <img className="artlicle_pic" src={Girl2} alt="pic" />
-            <img className="articles_sec_pic" src={Guy} alt="secpic" />
-            <img className="article_like" src={Like} alt="like" />
-            <p>20+</p>
-          </div>
-          <div className="articles_left">
-            <div className="articles_image">
-              <img className="articles_icon" src={Cookies} alt="icon" />
+
+          <div className="articles_wrap">
+            <div className="articles_left">
+              <div className="articles_image">
+                <img
+                  className="articles_icon_cookies"
+                  src={Cookies}
+                  alt="icon"
+                />
+              </div>
+            </div>
+            <div className="articles_right">
+              <p className="articles_text-p">
+                Tasty chunk donutes with chocolate
+              </p>
+              <div className="articles_feedback">
+                <img className="article_pic" src={Girl2} alt="pic" />
+                <img className="articles_pic" src={Guy} alt="secpic" />
+                <div className="articles_like_wrap">
+                  <img className="article_like" src={Like} alt="like" />
+                  <p className="articles_numb">18+</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="articles_right">
-            <p className="articles_text"></p>
-            <img className="artlicle_pic" src={Girl2} alt="pic" />
-            <img className="articles_sec_pic" src={Guy} alt="secpic" />
-            <img className="article_like" src={Like} alt="like" />
-            <p>18+</p>
-          </div>
-          <div className="articles_left">
-            <div className="articles_image">
-              <img className="articles_icon" src={Pizza} alt="icon" />
+          <div className="articles_wrap">
+            <div className="articles_left">
+              <div className="articles_image">
+                <img className="articles_icon_pizza" src={Pizza} alt="icon" />
+              </div>
             </div>
-          </div>
-          <div className="articles_right">
-            <p className="articles_text"></p>
-            <img className="artlicle_pic" src={Girl2} alt="pic" />
-            <img className="articles_sec_pic" src={Guy} alt="secpic" />
-            <img className="article_like" src={Like} alt="like" />
-            <p>30+</p>
+            <div className="articles_right">
+              <p className="articles_text-p">
+                Home made double cheez with popcorn respies
+              </p>
+              <div className="articles_feedback">
+                <img className="article_pic" src={Girl2} alt="pic" />
+                <img className="articles_pic" src={Guy} alt="secpic" />
+                <div className="articles_like_wrap">
+                  <img className="article_like" src={Like} alt="like" />
+                  <p className="articles_numb">30+</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
