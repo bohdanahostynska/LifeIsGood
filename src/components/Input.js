@@ -2,9 +2,11 @@ import React from "react";
 
 function Input({ label, placeholder, name, type = "text", value, onChange }) {
   return (
-    <label style={{ display: "block" }}>
-      <span>{label}</span>
+    // <label >
+    //style={{ display: "block" }}
+    <label className="form_label">
       <input
+        className="form_input"
         type={type}
         placeholder={placeholder}
         value={value}

@@ -3,7 +3,6 @@ import classnames from "classnames";
 import "../MenuScss.scss";
 import UserItem from "./UserItem";
 import DeliveryGuy from "./DeliveryGuy";
-import Home from "./Home";
 import MainPage from "./MainPage";
 import Articles from "./Arlicles";
 import "../styles/MenuProducts.scss";
