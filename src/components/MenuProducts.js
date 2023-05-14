@@ -5,6 +5,7 @@ import UserItem from "./UserItem";
 import DeliveryGuy from "./DeliveryGuy";
 import Home from "./Home";
 import MainPage from "./MainPage";
+import Articles from "./Arlicles";
 
 const menuList = [
   {
@@ -55,6 +56,7 @@ export const MenuProducts = () => {
           <DeliveryGuy />
         </div>
         <MainPage />
+        <Articles />
       </div>
     </div>
   );

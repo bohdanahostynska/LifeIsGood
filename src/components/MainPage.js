@@ -1,6 +1,7 @@
 import React from "react";
 import Drooling from "../assets/menu/drooling-face.svg";
 import MainOptions from "./MainOptions";
+import AllItems from "./AllItems";
 
 function MainPage() {
   return (
@@ -11,6 +12,7 @@ function MainPage() {
           <img className="main-drooling-face" src={Drooling} alt="drooling" />
         </div>
         <MainOptions />
+        <AllItems />
       </div>
     </div>
   );
