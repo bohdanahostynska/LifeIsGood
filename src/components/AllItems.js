@@ -1,122 +1,97 @@
-import React from "react";
-import Burger from "../assets/menu/all_pic/burger (2).svg";
-import Butter from "../assets/menu/all_pic//butterchicken.svg";
-import Salmon from "../assets/menu/all_pic/salmon.svg";
+import React, { useRef, useState } from "react";
+import burger from "../assets/menu/all_pic/burger (2).svg";
+import butter from "../assets/menu/all_pic//butterchicken.svg";
+import salmon from "../assets/menu/all_pic/salmon.svg";
 import "../styles/AllItems.scss";
-import Pizza from "../assets/menu/all_pic/pizza2.jpg";
-import Dessert from "../assets/menu/all_pic/icecream.jpg";
-import Coffee from "../assets/menu/all_pic/coffee.jpg";
+import soup from "../assets/menu/all_pic/articles/soup.svg";
+import dessert from "../assets/menu/all_pic/articles/donut-3d-.svg";
+import cocktail from "../assets/menu/all_pic/Cocktail.png";
 import Plus from "../assets/menu/all_pic/plus.svg";
-import Tick from "../assets/menu/all_pic/tick.svg";
-import Like from "../assets/menu/all_pic/like 1.svg";
-import Fire from "../assets/menu/all_pic/fire.svg";
 
-function AllItems() {
+const list = [
+  {
+    id: 1,
+    title: "Burger Wanted",
+    name: "burger",
+    image: burger,
+    text: "Take a bite and prepare for your mind to be blown away instantly!",
+    price: "$29",
+    icon: Plus,
+  },
+  {
+    id: 2,
+    title: "Butter Chciken",
+    name: "butter",
+    image: butter,
+    text: " Have you ever tried chicken melting in butter?",
+    price: "$56",
+    icon: Plus,
+  },
+  {
+    id: 3,
+    title: "Hi, Salmon",
+    name: "salmon",
+    image: salmon,
+    text: "Royal food at your service!Order our amazing salmon and feel like a king.",
+    price: "$60",
+    icon: Plus,
+  },
+  {
+    id: 4,
+    title: "What's up,soup?",
+    name: "soup",
+    image: soup,
+    text: "What a day without some soup? Come to us and you won't regret!",
+    price: "$30",
+    icon: Plus,
+  },
+
+  {
+    id: 5,
+    title: "How about a donut?",
+    name: "dessert",
+    image: dessert,
+    text: "You don't have to be a cop to try a donut:)  Hurry up! They won't be waiting all day!",
+    price: "$25",
+    icon: Plus,
+  },
+  {
+    id: 6,
+    title: "Do you wanna chill?",
+    name: "cocktail",
+    image: cocktail,
+    text: "Are you hot and exhausted? Then you are in the right place! Best cocktail ever here!",
+    price: "$35",
+    icon: Plus,
+  },
+];
+
+function AllItemsClone() {
   return (
-    <div className="all_items_content">
-      <div className="all_items_move">
-        <h2 className="all_items_title">All Items</h2>
+    <>
+      <div className="all_items_content">
+        <div className="all_items_offer">
+          <div className="all_items_folder">
+            {list.map(({ title, name, image, text, price, icon }) => (
+              <li key={name} style={{ listStyle: "none" }}>
+                <div className="all_items_all">
+                  <img className="all_items_img" src={image} alt="all_images" />
+                  <div className="all_items_bottom">
+                    <h3 className="all_items_title">{title}</h3>
+                    <p className="all_items_text">{text}</p>
+                    <div className="all_items_add">
+                      <p className="all_items_price">{price}</p>
+                      <img className="all_items_icon" src={icon} alt="plus" />
+                    </div>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </div>
+        </div>
       </div>
-      <div className="all_items_offer">
-        <div className="all_items_folder">
-          <div className="all_items_top">
-            <img className="all_items_img" src={Burger} alt="all_img" />
-            <img className="all_items_image" src={Like} alt="all_imgage" />
-          </div>
-          <div className="all_items_bottom">
-            <h3 className="all_items_title">Burger Wanted</h3>
-            <p className="all_items_text">
-              Rels, Zoodies, Garnein Sesasam Dessigns, Redeshchein, Avocade
-            </p>
-            <div className="all_items_add">
-              <p className="all_items_price">$29</p>
-              <img className="all_items_icon" src={Plus} alt="plus" />
-            </div>
-          </div>
-        </div>
-        <div className="all_items_folder">
-          <div className="all_items_top">
-            <img className="all_items_img" src={Butter} alt="all_img" />
-            <img className="all_items_image" src={Like} alt="all_imgage" />
-          </div>
-          <div className="all_items_bottom">
-            <h3 className="all_items_title">Butter Chciken</h3>
-            <p className="all_items_text">
-              Reis, Sous-vide Chicken, Penaut Satay, Babyspian
-            </p>
-            <div className="all_items_add">
-              <p className="all_items_price">$56</p>
-              <img className="all_items_icon" src={Plus} alt="plus" />
-            </div>
-          </div>
-        </div>
-        <div className="all_items_folder">
-          <div className="all_items_top">
-            <img className="all_items_img" src={Salmon} alt="all_img" />
-            <img className="all_items_image" src={Like} alt="all_imgage" />
-          </div>
-          <div className="all_items_bottom">
-            <h3 className="all_items_title">Hi, Salmon</h3>
-            <p className="all_items_text">
-              Rels, Zoodies, Garnein Dressings, Avacode Edanmame, Maris.
-            </p>
-            <div className="all_items_add">
-              <p className="all_items_price">$69</p>
-              <img className="all_items_icon" src={Plus} alt="plus" />
-            </div>
-          </div>
-        </div>
-        {/* <div className="all_items_folder">
-          <div className="all_items_top">
-            <img className="all_items_img" src={Pizza} alt="all_img" />
-            <img className="all_items_image" src={Like} alt="all_imgage" />
-          </div>
-          <div className="all_items_bottom">
-            <h3 className="all_items_title">What's up,Pizza?</h3>
-            <p className="all_items_text">Rels, Zoodies, Garnein
-Sesasam Dessigns,
-Redeshchein, Avocade</p>
-            <div className="all_items_add">
-              <p className="all_items_price">$42</p>
-              <img className="all_items_icon" src={Plus} alt="plus" />
-            </div>
-          </div>
-        </div>
-        <div className="all_items_folder">
-          <div className="all_items_top">
-            <img className="all_items_img" src={Dessert} alt="all_img" />
-            <img className="all_items_image" src={Like} alt="all_imgage" />
-          </div>
-          <div className="all_items_bottom">
-            <h3 className="all_items_title">Do you wanna chill?</h3>
-            <p className="all_items_text">Rels, Zoodies, Garnein
-Sesasam Dessigns,
-Redeshchein, Avocade</p>
-            <div className="all_items_add">
-              <p className="all_items_price">$60</p>
-              <img className="all_items_icon" src={Plus} alt="plus" />
-            </div>
-          </div>
-        </div>
-        <div className="all_items_folder">
-          <div className="all_items_top">
-            <img className="all_items_img" src={Coffee} alt="all_img" />
-            <img className="all_items_image" src={Like} alt="all_imgage" />
-          </div>
-          <div className="all_items_bottom">
-            <h3 className="all_items_title">Grab some coffee!</h3>
-            <p className="all_items_text">Rels, Zoodies, Garnein
-Sesasam Dessigns,
-Redeshchein, Avocade</p>
-            <div className="all_items_add">
-              <p className="all_items_price">$35</p>
-              <img className="all_items_icon" src={Plus} alt="plus" />
-            </div>
-          </div>
-        </div> */}
-      </div>
-    </div>
+    </>
   );
 }
 
-export default AllItems;
+export default AllItemsClone;

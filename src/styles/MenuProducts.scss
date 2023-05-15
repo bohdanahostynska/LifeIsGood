@@ -1,3 +1,4 @@
+
 .features {
     margin-left: 40px;
     padding-bottom: 50px;
@@ -17,68 +18,63 @@
         width: 70px;
         height: 70px;
         border-radius: 15px;
-        background-color: #fff;
+         background-color: #fff;
+    
         padding-top: 7px;
         padding-left: 8px;
       }
     }
     .menu {
-      width: 185px;
-      $white: #ff5454;
-
-      &__item {
+      margin: 60px 35px 0;
+    
+      &__list {
+        text-decoration: none;
+      }
+    
+      &-link {
+        background: transparent;
+        border-radius: 15px;
         display: flex;
         align-items: center;
-        border-radius: 15px;
-
-        margin-bottom: 45px;
-
-        &--active {
-          background: #ff5454;
-          width: 150px;
-          .menu {
-            &__icon {
-              background: rgb(189, 73, 73);
-
-              &:before {
-                background: white;
-              }
-            }
-            &__title {
-              color: white;
-            }
-          }
-        }
-
+        width: 184px;
+        height: 44px;
+        margin-bottom: 40px;
+    
         &:last-child {
           margin-bottom: 0;
         }
-      }
-
-      &__icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 46px;
-        height: 44px;
-
-        border-radius: 15px;
-        background: rgb(189, 73, 73);
-        margin-right: 45px;
-
-        &:before {
-          content: "";
-          display: inline-block;
-          height: 15px;
-          width: 15px;
-          background: rgb(179, 179, 213);
+    
+        span {
+          color: #909090;
+          margin-left: 20px;
+        }
+    
+        &-icon {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          height: 44px;
+          width: 44px;
+          background: #fff;
+          border-radius: 15px;
+        }
+    
+        &-active {
+          background: #ff5454;
+    
+          span {
+            color: #fff;
+          }
+    
+          .menu-link-icon {
+            background: #df4545;
+            stroke: #fff;
+          }
         }
       }
-      &__title {
-        color: gray;
-      }
     }
-
+    
+    
     .guy {
       display: inline-block;
 

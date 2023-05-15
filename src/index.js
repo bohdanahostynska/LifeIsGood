@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import "./index.css";
+import "./";
 // import "./MenuScss.scss";
 import RouterApp from "./RouterApp";
 import { BrowserRouter as Router } from "react-router-dom";

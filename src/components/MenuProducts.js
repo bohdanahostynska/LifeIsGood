@@ -1,37 +1,46 @@
 import React, { useState } from "react";
-import classnames from "classnames";
 import "../MenuScss.scss";
 import UserItem from "./UserItem";
 import DeliveryGuy from "./DeliveryGuy";
 import MainPage from "./MainPage";
 import Articles from "./Arlicles";
 import "../styles/MenuProducts.scss";
+import { Icon } from "../icons";
 
-const menuList = [
+const list = [
   {
     id: 1,
     title: "Home",
+    name: "Home",
+    svgName: "home",
   },
   {
     id: 2,
     title: "Menu",
+    name: "Menu",
+    svgName: "menu",
   },
   {
     id: 3,
-    title: "Trend",
+    title: "Trendng",
+    name: "Trend",
+    svgName: "flame",
   },
   {
     id: 4,
     title: "Setting",
+    name: "Setting",
+    svgName: "setting",
   },
 ];
 
 export const MenuProducts = () => {
-  const [activeItem, setActiveItem] = useState(menuList[0]);
+  const [activeItem, setActiveItem] = useState(list[0]);
 
-  const changeActiveItem = (item) => {
-    setActiveItem(item);
+  const click = (name) => {
+    setActiveItem(list.find((x) => x.name === name));
   };
+
   return (
     <div className="container">
       <div className="wrapper">
@@ -39,16 +48,21 @@ export const MenuProducts = () => {
           <UserItem />
           <nav className="menu">
             <ul className="menu__list">
-              {menuList.map((item) => (
+              {list.map(({ title, name, svgName }) => (
                 <li
-                  className={classnames("menu__item", {
-                    "menu__item--active": activeItem.id === item.id,
-                  })}
-                  key={item.id}
-                  onClick={() => changeActiveItem(item)}
+                  key={name}
+                  style={{ listStyle: "none" }}
+                  className={
+                    activeItem.name === name
+                      ? "menu-link menu-link-active"
+                      : "menu-link"
+                  }
+                  onClick={() => click(name)}
                 >
-                  <div className="menu__icon"></div>
-                  <span className="menu__title">{item.title}</span>
+                  <div className="menu-link-icon">
+                    <Icon name={svgName} />
+                  </div>
+                  <span>{title}</span>
                 </li>
               ))}
             </ul>

@@ -38,7 +38,9 @@ function Auth() {
           <button className="button" type="submit">
             Login
           </button>
-          <li className="form_text">don't have an account</li>
+          <li className="form_text" style={{ listStyle: "none" }}>
+            don't have an account
+          </li>
         </form>
       </div>
     </div>

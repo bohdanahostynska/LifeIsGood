@@ -1,10 +1,9 @@
-.li::marker{
-    text-decoration: none;
-}
-.main_options {
 
+.main_options {
+  z-index: 99;
+  position: sticky;
+  
   &_list {
-    display: flex;
      display: grid;
       grid-template-columns: repeat(6, 100px);
       gap: 30px;
@@ -17,6 +16,10 @@
     margin-right: 15px;
     background: #f3f3f3;
     text-align: center;
+    list-style: none;
+    box-sizing: border-box;
+    z-index: 99;
+    position: sticky;
 
 
     &:last-child {
