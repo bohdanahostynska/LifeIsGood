@@ -27,7 +27,7 @@ function Auth() {
     <div className="form_container">
       <div className="form_header">
         <h2 className="main_title">Welcome To Yelp App</h2>
-        <img className="main-drooling-face" src={Drooling} alt="drooling" />
+        <img className="drooling-face" src={Drooling} alt="drooling" />
       </div>
       <div className="form_content">
         <form className="form_wrap" onSubmit={handleSignIn}>

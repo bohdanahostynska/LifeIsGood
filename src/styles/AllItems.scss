@@ -13,7 +13,6 @@
     display: inline-block;
     box-sizing: border-box;
     position: relative;
-    // display: flex;
   }
 
   &_img {
@@ -21,8 +20,9 @@
 
     display: block;
     width: 178px;
+    height: 130px;
     z-index: 10;
-    top: 0;
+    top: -20px;
     margin-left: 25px;
   }
 

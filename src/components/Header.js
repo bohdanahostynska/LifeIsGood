@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Header.scss";
 import Drooling from "../assets/menu/drooling-face.svg";
 function Header() {
   return (

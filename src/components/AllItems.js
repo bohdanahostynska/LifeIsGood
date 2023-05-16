@@ -1,4 +1,5 @@
 import React from "react";
+import Plus from "../assets/menu/all_pic/plus.svg";
 
 import "../styles/AllItems.scss";
 
@@ -21,7 +22,7 @@ function AllItemsClone({ currentFilter }) {
               <p className="all_items_text">{text}</p>
               <div className="all_items_add">
                 <p className="all_items_price">{price}</p>
-                <img className="all_items_icon" src={icon} alt="plus" />
+                <img className="all_items_icon" src={Plus} alt="plus" />
               </div>
             </div>
           </div>

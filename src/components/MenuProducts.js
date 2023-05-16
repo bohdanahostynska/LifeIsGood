@@ -6,7 +6,7 @@ import MainPage from "./MainPage";
 import Articles from "./Arlicles";
 import "../styles/MenuProducts.scss";
 import { Icon } from "../icons";
-import { NavLink, useLocation, useParams } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const list = [
   {

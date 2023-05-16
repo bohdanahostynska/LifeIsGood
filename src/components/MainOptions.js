@@ -6,6 +6,7 @@ import pizza from "../assets/menu/mainpic/pizza.svg";
 import salads from "../assets/menu/mainpic/salads.svg";
 import donut from "../assets/menu/mainpic/donut.svg";
 import drinks from "../assets/menu/mainpic/drinks.svg";
+import { useSelector, useDispatch } from "react-redux";
 
 export const categoryList = [
   { id: 1, title: "all", name: "all", icon: all },

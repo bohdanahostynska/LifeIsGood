@@ -6,7 +6,7 @@ import "../styles/MainPage.scss";
 
 function MainPage() {
   const [filter, setFilter] = useState(categoryList[0]);
-
+  console.log(categoryList);
   return (
     <>
       <div className="main_page">
@@ -19,5 +19,4 @@ function MainPage() {
     </>
   );
 }
-
 export default MainPage;

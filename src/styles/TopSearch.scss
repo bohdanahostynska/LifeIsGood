@@ -1,38 +1,20 @@
-.header {
+.top_nav {
     display: flex;
-    justify-content: space-between;
-    align-items: start;
-  
-    &_title {
-      position: relative;
-      margin-top: 50px;
-      margin-left: 60px;
-      width: 320px;
-      font-weight: 800;
-      font-size: 48px;
-      line-height: 65px;
-    }
   }
-  
-  .smiling_face {
-    position: absolute;
-    right: 70px;
+  .top_search {
+    width: 18px;
+    height: 18px;
+    border-radius: 15px;
+    background: #f3f3f3;
+    margin-top: 18px;
+    margin-right: 30px;
+    padding: 18px;
   }
-  
-  .shop_header_items {
-    margin-top: 50px;
-    margin-right: 60px;
-  }
-  
-  .basket_shop {
-    margin-left: 20px;
-  }
-  
-  .basket_sign {
-    position: absolute;
-    right: 55px;
-    border-radius: 50%;
-    width: 12px;
-    height: 12px;
-    background: #ff5454;
+  .top_basket {
+    width: 18px;
+    height: 18px;
+    border-radius: 15px;
+    background: #666666;
+    padding: 18px;
+    margin-top: 18px;
   }
