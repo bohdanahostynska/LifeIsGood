@@ -10,6 +10,31 @@
     max-width: 400px;
     margin: 0 auto;
   }
+
+  .form_img_1 {
+    position: absolute;
+    width: 200px;
+    left: 10%;
+    top: 10%;
+  }
+  .form_img_2 {
+    position: absolute;
+    width: 200px;
+    right: 10%;
+    top: 10%;
+  }
+  .form_img_3 {
+    position: absolute;
+    width: 200px;
+    left: 15%;
+    bottom: 10px;
+  }
+  .form_img_4 {
+    position: absolute;
+    width: 200px;
+    right: 10%;
+    bottom: 10px;
+  }
   .main_title {
     position: relative;
     width: 320px;

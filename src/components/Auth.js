@@ -2,6 +2,10 @@ import React from "react";
 import Input from "./Input";
 import { useInput } from "../hooks/useInput";
 import Drooling from "../assets/menu/drooling-face.svg";
+import apple from "../assets/login/bitten-apple.svg";
+import grapes from "../assets/login/grapes.svg";
+import leaf from "../assets/login/leaf 2.svg";
+import orange from "../assets/login/orange.svg";
 import "../styles/Register.scss";
 import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
 import { useNav } from "../context/useNav";
@@ -26,6 +30,10 @@ function Auth() {
   return (
     <div className="form_container">
       <div className="form_header">
+        <img className="form_img_1" src={grapes} alt="form" />
+        <img className="form_img_2" src={leaf} alt="form" />
+        <img className="form_img_3" src={apple} alt="form" />
+        <img className="form_img_4" src={orange} alt="form" />
         <h2 className="main_title">Welcome To Yelp App</h2>
         <img className="drooling-face" src={Drooling} alt="drooling" />
       </div>
