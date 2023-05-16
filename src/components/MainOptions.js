@@ -16,7 +16,7 @@ export const categoryList = [
   { id: 6, title: "drinks", name: "drink", icon: drinks },
 ];
 
-const MainOptions = ({ curentFilter, setFilter }) => {
+const MainOptions = ({ currentFilter, setFilter }) => {
   const click = (name) => {
     setFilter(categoryList.find((x) => x.name === name));
   };
@@ -28,7 +28,7 @@ const MainOptions = ({ curentFilter, setFilter }) => {
           <li
             key={name}
             className={
-              curentFilter.name === name
+              currentFilter.name === name
                 ? "main_options_item main_options_item-active"
                 : "main_options_item"
             }

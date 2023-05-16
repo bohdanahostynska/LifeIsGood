@@ -4,11 +4,11 @@ import "../styles/AllItems.scss";
 
 import { allFood } from "../data/foodData";
 
-function AllItemsClone({ curentFilter }) {
+function AllItemsClone({ currentFilter }) {
   const data =
-    curentFilter.name === "all"
+    currentFilter.name === "all"
       ? allFood
-      : allFood.filter((el) => el.category === curentFilter.name);
+      : allFood.filter((el) => el.category === currentFilter.name);
 
   return (
     <>

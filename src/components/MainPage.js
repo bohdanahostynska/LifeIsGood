@@ -12,8 +12,8 @@ function MainPage() {
       <div className="main_page">
         <div className="main_list">
           <Header />
-          <MainOptions curentFilter={filter} setFilter={setFilter} />
-          <AllItems curentFilter={filter} />
+          <MainOptions currentFilter={filter} setFilter={setFilter} />
+          <AllItems currentFilter={filter} />
         </div>
       </div>
     </>

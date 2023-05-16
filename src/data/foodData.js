@@ -3,10 +3,10 @@ import burger_2 from "../assets/burgers/burger_2.png";
 import burger_3 from "../assets/burgers/burger_3.png";
 import burger_4 from "../assets/burgers/burger_4.png";
 
-import chicken_1 from "../assets/menu/all_pic/butterchicken.svg";
-import chicken_2 from "../assets/menu/all_pic/butterchicken.svg";
-import chicken_3 from "../assets/menu/all_pic/butterchicken.svg";
-import chicken_4 from "../assets/menu/all_pic/butterchicken.svg";
+import pizza_1 from "../assets/pizza/pizza_1.png";
+import pizza_2 from "../assets/pizza/pizza_2.png";
+import pizza_3 from "../assets/pizza/pizza_3.png";
+import pizza_4 from "../assets/pizza/pizza_4.png";
 
 import salmon_1 from "../assets/menu/all_pic/salmon.svg";
 import salmon_2 from "../assets/menu/all_pic/salmon.svg";
@@ -65,34 +65,34 @@ const burgers = [
 const pizza = [
   {
     id: 1,
-    title: "Butter Chciken",
+    title: "Grab some pizza!",
     category: "pizza",
-    image: chicken_1,
-    text: " Have you ever tried chicken melting in butter?",
+    image: pizza_1,
+    text: "A huge slice of pizza is gonna make your day!",
     price: "$56",
   },
   {
     id: 2,
-    title: "Butter Chciken",
+    title: "Grab some pizza!",
     category: "pizza",
-    image: chicken_2,
-    text: " Have you ever tried chicken melting in butter?",
+    image: pizza_2,
+    text: "A huge slice of pizza is gonna make your day!",
     price: "$56",
   },
   {
     id: 3,
-    title: "Butter Chciken",
+    title: "Grab some pizza!",
     category: "pizza",
-    image: chicken_3,
-    text: " Have you ever tried chicken melting in butter?",
+    image: pizza_3,
+    text: "A huge slice of pizza is gonna make your day!",
     price: "$56",
   },
   {
     id: 4,
-    title: "Butter Chciken",
+    title: "Grab some pizza!",
     category: "pizza",
-    image: chicken_4,
-    text: " Have you ever tried chicken melting in butter?",
+    image: pizza_4,
+    text: "A huge slice of pizza is gonna make your day!",
     price: "$56",
   },
 ];
