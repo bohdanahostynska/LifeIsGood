@@ -1,54 +1,39 @@
-.all_items_content {
- display: grid;
- grid-template-columns: repeat(3,2fr);
-  width: 100%;
-  height: 100%;
-  padding: 50px 0;
-  overflow-y: scroll;
-
-
-  .all_items_offer {
-    display: inline-block;
-   width:100%;
-   height:100%;
-
-   
-    .all_items_folder {
-      
-       display: flex;
-      flex-direction: row;
-      // margin-right: 30px;
-      position: relative;
-      width: 206px;
-      height: 268px;
-   
-    }
-    .all_items_all {
-      width: 250px;
-      height: 100%;
-      display: inline-block;
-       box-sizing: border-box;
-      // display: flex;
-  
-    }
-    .all_items_img {
-      position: absolute;
-     
-      display: block;
-      width: 178px;
-      // object-fit: cover;
-      z-index: 10;
-      top:0;
-      margin-left: 25px;
-    }
-    .all_items_image {
-      position: absolute;
-      right: 20px;
-      top: -30px;
-      right:2px;
-    }
+.all_items {
+  &_content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    padding: 50px 0;
   }
-  .all_items_bottom {
+
+  &_all {
+    width: 33.33%;
+    height: 260px;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    // display: flex;
+  }
+
+  &_img {
+    position: absolute;
+
+    display: block;
+    width: 178px;
+    z-index: 10;
+    top: 0;
+    margin-left: 25px;
+  }
+
+  &_image {
+    position: absolute;
+    right: 20px;
+    top: -30px;
+    right: 2px;
+  }
+
+  &_bottom {
     background-color: #f3f3f3;
     border: 1px solid #dad3d3;
     box-shadow: 0px 4px 46px rgba(0, 0, 0, 0.3);
@@ -62,13 +47,15 @@
     border-radius: 30px;
     padding-left: 10px;
   }
-  .all_items_title {
+
+  &_title {
     font-weight: 800;
     font-size: 14px;
     line-height: 13px;
     margin: 70px 28px 10px;
   }
-  .all_items_text {
+
+  &_text {
     max-width: 123px;
     margin-left: 28px;
     font-weight: 600;
@@ -77,7 +64,8 @@
     color: #898686;
     margin-bottom: 10px;
   }
-  .all_items_price {
+
+  &_price {
     position: absolute;
     top: 120px;
     font-weight: 800;
@@ -85,7 +73,8 @@
     line-height: 18px;
     left: 0;
   }
-  .all_items_icon {
+
+  &_icon {
     position: absolute;
     top: 128px;
     left: 175px;

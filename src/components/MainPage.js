@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./Header";
-import MainOptions from "./MainOptions";
+import MainOptions, { categoryList } from "./MainOptions";
 import AllItems from "./AllItems";
 import "../styles/MainPage.scss";
 
 function MainPage() {
+  const [filter, setFilter] = useState(categoryList[0]);
+
   return (
     <>
       <div className="main_page">
         <div className="main_list">
           <Header />
-          <MainOptions />
-          <AllItems />
+          <MainOptions curentFilter={filter} setFilter={setFilter} />
+          <AllItems curentFilter={filter} />
         </div>
       </div>
     </>

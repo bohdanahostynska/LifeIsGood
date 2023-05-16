@@ -3,13 +3,26 @@ import Input from "./Input";
 import { useInput } from "../hooks/useInput";
 import Drooling from "../assets/menu/drooling-face.svg";
 import "../styles/Register.scss";
+import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
+import { useNav } from "../context/useNav";
 
 function Auth() {
   const email = useInput();
   const pass = useInput();
-  const handleSignIn = (event) => {
-    event.prevent.Default();
+  const auth = getAuth();
+  const { goTo } = useNav();
+
+  const handleSignIn = async (event) => {
+    event.preventDefault();
+    try {
+      await signInWithEmailAndPassword(auth, email.value, pass.value);
+
+      goTo("/menu");
+    } catch (error) {
+      console.log({ error });
+    }
   };
+
   return (
     <div className="form_container">
       <div className="form_header">
