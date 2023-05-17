@@ -1,4 +1,4 @@
-.articles {
+.articles_content {
   background-color: white;
   border-top-right-radius: 60px;
   border-bottom-right-radius: 60px;
@@ -7,7 +7,7 @@
     padding-bottom: 100px;
   }
 
-  &_header {
+  .articles_header {
     position: relative;
     display: inline-block;
     margin-top: 150px;
@@ -22,32 +22,32 @@
     box-sizing: border-box;
     border-radius: 30px;
   }
-  &_img_frst {
+  .articles_img_frst {
     position: absolute;
     top: -50px;
     left: 10%;
   }
-  &_img_sec {
+  .articles_img_sec {
     top: 60px;
     left: 85%;
     position: absolute;
   }
-  &_img_thrd {
+  .articles_img_thrd {
     top: -60px;
     left: 54%;
     position: absolute;
   }
-  &_img_fth {
+  .articles_img_fth {
     top: 20px;
     left: 45%;
     position: absolute;
   }
-  &_img_fifth {
+  .articles_img_fifth {
     top: -150px;
     left: 15%;
     position: absolute;
   }
-  &_discount {
+  .articles_discount {
     margin-top: 80px;
     margin-left: 20px;
     margin-bottom: 0;
@@ -57,20 +57,20 @@
     line-height: 27px;
     display: inline-block;
   }
-  &_text {
+  .articles_text {
     margin-left: 20px;
     color: white;
     font-weight: 600;
     font-size: 14px;
     line-height: 16px;
   }
-  &_top {
+  .articles_top {
     display: flex;
     justify-content: space-between;
     width: 300px;
   }
 
-  &_title {
+  .articles_title {
     font-weight: 800;
     font-size: 24px;
     line-height: 27px;
@@ -83,31 +83,31 @@
     margin-top: 20px;
   }
 
-  &_arr {
+  .articles_arr {
     background-color: #f5f6f7;
     border-radius: 5px;
     padding: 20px;
   }
-  &_wrap {
+  .articles_wrap {
     display: flex;
     align-items: start;
     width: 300px;
   }
-  &_text-p {
+  .articles_text-p {
     color: black;
     font-weight: 700;
     width: 195px;
     margin-bottom: 0;
   }
 
-  &_image {
+  .articles_image {
     margin-left: 10px;
   }
-  &_right {
+  .articles_right {
     margin-left: 10px;
   }
 
-  &_icon_chicken {
+  .articles_icon_chicken {
     width: 50px;
     height: 50px;
     border-radius: 15px;
@@ -116,7 +116,7 @@
     background: #fff0a5;
     margin-top: 18px;
   }
-  &_icon_face {
+  .articles_icon_face {
     width: 50px;
     height: 50px;
     border-radius: 15px;
@@ -125,7 +125,7 @@
     background: #d6f5ff;
     margin-top: 18px;
   }
-  &_icon_cookies {
+  .articles_icon_cookies {
     width: 50px;
     height: 50px;
     border-radius: 15px;
@@ -134,7 +134,7 @@
     background: #fedcee;
     margin-top: 18px;
   }
-  &_icon_pizza {
+  .articles_icon_pizza {
     width: 50px;
     height: 50px;
     border-radius: 15px;
@@ -143,17 +143,17 @@
     background: #c1fff4;
     margin-top: 18px;
   }
-  &_feedback {
+  .articles_feedback {
     display: flex;
   }
-  &_like_wrap {
+  .articles_like_wrap {
     display: flex;
     background: #fedcee;
     border-radius: 15px;
     width: 55px;
     height: 23px;
   }
-  &_numb {
+  .articles_numb {
     display: inline-block;
     margin-bottom: 20px;
     margin-top: 0;

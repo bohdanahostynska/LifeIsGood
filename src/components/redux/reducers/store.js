@@ -5,4 +5,5 @@ export const store = configureStore({
   reducer: {
     categoryList: categoryListReducer,
   },
+  devTools: true,
 });

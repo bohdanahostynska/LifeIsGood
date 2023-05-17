@@ -1,0 +1,37 @@
+.order_basket_container {
+  background-color: white;
+  // position: fixed;
+  position: absolute;
+  padding-top: 100px;
+  right: 0;
+  top: 50px;
+  height: 700px;
+  width: 400px;
+  border-radius: 20px 0 0 20px;
+  z-index: 1200;
+
+  .order_basket_content {
+    padding: 100px 60px;
+    height: 700px;
+  }
+  .order_basket_body {
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+  }
+  .order_basket_text {
+    margin-bottom: 40px;
+    margin-left: 20px;
+  }
+  .order_basket_button {
+    display: block;
+    border-radius: 15px;
+    border: none;
+    width: 260px;
+    height: 50px;
+    background: #2d9cdb;
+
+    margin-left: 10%;
+    color: white;
+  }
+}

@@ -18,6 +18,7 @@ export const categoryList = [
 ];
 
 const MainOptions = ({ currentFilter, setFilter }) => {
+  // const categoryList = useSelector((state) => state.categoryList.categoryList);
   const click = (name) => {
     setFilter(categoryList.find((x) => x.name === name));
   };
