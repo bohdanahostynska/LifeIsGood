@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   categoryList: [],
   isOpenBasket: false,
+  isLoading: false,
 };
 const categoryListSlice = createSlice({
   name: "categoryList",
@@ -19,10 +20,18 @@ const categoryListSlice = createSlice({
       ...state,
       isOpenOrderMoreBasket: !state.isOpenOrderMoreBasket,
     }),
+    handleSearchClick: (state) => ({
+      ...state,
+      isLoading: !state.isLoading,
+    }),
   },
 });
 
-export const { createCategoryList, handleOpenBasket, handleOrderMoreBasket } =
-  categoryListSlice.actions;
+export const {
+  createCategoryList,
+  handleOpenBasket,
+  handleOrderMoreBasket,
+  handleSearchClick,
+} = categoryListSlice.actions;
 
 export default categoryListSlice.reducer;

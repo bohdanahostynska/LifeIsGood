@@ -1,6 +1,6 @@
 import React from "react";
 import Plus from "../assets/menu/all_pic/plus.svg";
-import { createCategoryList } from "./redux/reducers/categoryListSlice";
+import { createCategoryList } from "../redux/reducers/categoryListSlice";
 import { useDispatch } from "react-redux";
 import "../styles/AllItems.scss";
 import { allFood } from "../data/foodData";

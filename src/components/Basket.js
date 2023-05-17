@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   handleOpenBasket,
   handleOrderMoreBasket,
-} from "./redux/reducers/categoryListSlice";
+} from "../redux/reducers/categoryListSlice";
 
 function Basket() {
   const { categoryList } = useSelector((state) => state.categoryList);
