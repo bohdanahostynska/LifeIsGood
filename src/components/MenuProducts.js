@@ -58,6 +58,7 @@ export const MenuProducts = () => {
                 return link ? (
                   <NavLink
                     to={link}
+                    key={name}
                     className={
                       pathname === link
                         ? "menu-link menu-link-active"
@@ -65,7 +66,6 @@ export const MenuProducts = () => {
                     }
                   >
                     <li
-                      key={name}
                       style={{ listStyle: "none" }}
                       onClick={() => click(name)}
                     >

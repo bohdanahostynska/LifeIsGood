@@ -6,7 +6,6 @@ import pizza from "../assets/menu/mainpic/pizza.svg";
 import salads from "../assets/menu/mainpic/salads.svg";
 import donut from "../assets/menu/mainpic/donut.svg";
 import drinks from "../assets/menu/mainpic/drinks.svg";
-import { useSelector, useDispatch } from "react-redux";
 
 export const categoryList = [
   { id: 1, title: "all", name: "all", icon: all },
@@ -25,7 +24,7 @@ const MainOptions = ({ currentFilter, setFilter }) => {
   return (
     <nav className="main_options">
       <ul className="main_options_list">
-        {categoryList.map(({ title, name, icon }) => (
+        {categoryList.map(({ title, name, icon, index }) => (
           <li
             key={name}
             className={
@@ -39,6 +38,7 @@ const MainOptions = ({ currentFilter, setFilter }) => {
               <img src={icon} alt="options" />
             </div>
             <p className="options_title">{title}</p>
+            <p className="options_title">{index}</p>
           </li>
         ))}
       </ul>

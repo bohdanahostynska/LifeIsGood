@@ -10,6 +10,7 @@ import { firebaseConfig } from "./base";
 import { Provider } from "react-redux";
 
 import { store } from "./redux/reducers/store";
+import { calculateTotals } from "./redux/reducers/categoryListSlice";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

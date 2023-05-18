@@ -1,55 +1,55 @@
-.basket {
-  &_container {
-    background-color: white;
-    // position: fixed;
-    position: absolute;
-    right: 0;
-    top: 50px;
-    height: 80%;
-    width: 400px;
-    border-radius: 20px 0 0 20px;
-    z-index: 1200;
-  }
-  &_content {
-    padding: 20px 20px;
-    height: 600px;
-  }
-  &_header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  &_arrow {
-    background-color: #f5f6f7;
-    border-radius: 15px;
-    padding: 20px;
-  }
-  &_item {
-    display: flex;
-  }
-  &_image {
-    display: block;
-    width: 36px;
-    height: 36px;
-    margin-top: 20px;
-    margin-right: 20px;
-  }
-  &_text {
-    width: 200px;
-  }
-  &_price {
-    margin-top: 15px;
-    margin-left: 40px;
-  }
-  &_button {
+.basket_container {
+  background-color: white;
+  position: fixed;
+  right: 0;
+  top: 50px;
+  height: 80%;
+  width: 400px;
+  height: 700px;
+  border-radius: 20px 20px 20px 20px;
+  z-index: 1200;
+  padding-bottom: 40px;
+
+  .basket_button {
     display: block;
     border-radius: 15px;
     border: none;
     width: 260px;
     height: 50px;
     background: #2d9cdb;
-
     margin-left: 20%;
     color: white;
+  }
+  .basket_content {
+    padding: 20px 20px;
+    height: calc(100% - 68px);
+    overflow-y: auto;
+  }
+  .basket_header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .basket_arrow {
+    background-color: #f5f6f7;
+    border-radius: 15px;
+    padding: 20px;
+  }
+  .basket_item {
+    display: flex;
+  }
+  .basket_image {
+    display: block;
+    width: 36px;
+    height: 36px;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  .basket_text {
+    width: 200px;
+  }
+  .basket_price {
+    margin-top: 15px;
+    margin-left: 40px;
   }
 }

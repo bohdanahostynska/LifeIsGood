@@ -5,12 +5,14 @@ import Auth from "./components/Auth";
 import Register from "./components/Register";
 import Home from "./components/Home";
 import { AuthContext } from "./context/AuthContext";
+import Loader from "./components/Loader";
 
 const links = [
   { id: "1", link: "/", name: "Home" },
   { id: "2", link: "register", name: "Register" },
   { id: "3", link: "login", name: "Auth" },
-  { id: "4", link: "menu", name: "MenuProducts" },
+  { id: "4", link: "loader", name: "Loader" },
+  { id: "5", link: "menu", name: "MenuProducts" },
 ];
 
 // const PrivateRoute = ({ children }) => {
@@ -26,10 +28,14 @@ const RouterApp = () => {
   const { currentUser } = React.useContext(AuthContext);
   return (
     <div className="container">
-      <nav className="header-nav">
+      <nav className="header_nav">
         <ul className="header-ul">
           {links.map(({ id, link, name }) => (
-            <li key={id} className="nav_item">
+            <li
+              key={id}
+              className="nav_item"
+              style={{ listStyle: "none", textDecoration: "none" }}
+            >
               <NavLink
                 className="nav_link"
                 style={({ isActive }) => {
@@ -58,7 +64,7 @@ const RouterApp = () => {
             path="/login"
             element={currentUser ? <Navigate to="/" /> : <Auth />}
           />
-          {/* <Route path="/login" element={<Auth />} /> */}
+          {/* <Route path="/loader" element={<Loader />} /> */}
           <Route path="/menu" element={<MenuProducts />} />
 
           <Route path="*" element={<Navigate to="/login" />} />

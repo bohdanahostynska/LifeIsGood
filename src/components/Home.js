@@ -3,7 +3,7 @@ import "../styles/Home.scss";
 
 function Home() {
   return (
-    <div>
+    <div className=" home_content">
       <button className="home_button">Sign out</button>
     </div>
   );

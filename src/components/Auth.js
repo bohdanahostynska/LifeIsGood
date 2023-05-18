@@ -1,27 +1,37 @@
 import React from "react";
 import Input from "./Input";
+import "../styles/Register.scss";
 import { useInput } from "../hooks/useInput";
 import Drooling from "../assets/menu/drooling-face.svg";
 import apple from "../assets/login/bitten-apple.svg";
 import grapes from "../assets/login/grapes.svg";
 import leaf from "../assets/login/leaf 2.svg";
 import orange from "../assets/login/orange.svg";
-import "../styles/Register.scss";
 import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
 import { useNav } from "../context/useNav";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import Loader from "../components/Loader";
+import { setLoading } from "../redux/reducers/authSlice";
+import { Link } from "react-router-dom";
 
 function Auth() {
   const email = useInput();
   const pass = useInput();
   const auth = getAuth();
   const { goTo } = useNav();
+  const dispatch = useDispatch();
+  const { loading } = useSelector((state) => state.auth);
 
   const handleSignIn = async (event) => {
     event.preventDefault();
     try {
+      dispatch(setLoading(true));
       await signInWithEmailAndPassword(auth, email.value, pass.value);
-
-      goTo("/menu");
+      setTimeout(() => {
+        dispatch(setLoading(false));
+        goTo("/menu");
+      }, 4000);
     } catch (error) {
       console.log({ error });
     }
@@ -29,6 +39,7 @@ function Auth() {
 
   return (
     <div className="form_container">
+      {/* {loading && <Loader />} */}
       <div className="form_header">
         <img className="form_img_1" src={grapes} alt="form" />
         <img className="form_img_2" src={leaf} alt="form" />
