@@ -41,15 +41,15 @@ function Auth() {
     <div className="form_container">
       {/* {loading && <Loader />} */}
       <div className="form_header">
-        <img className="form_img_1" src={grapes} alt="form" />
-        <img className="form_img_2" src={leaf} alt="form" />
-        <img className="form_img_3" src={apple} alt="form" />
-        <img className="form_img_4" src={orange} alt="form" />
         <h2 className="main_title">Welcome To Yelp App</h2>
         <img className="drooling-face" src={Drooling} alt="drooling" />
       </div>
       <div className="form_content">
         <form className="form_wrap" onSubmit={handleSignIn}>
+          <img className="form_img_1" src={grapes} alt="form" />
+          <img className="form_img_2" src={leaf} alt="form" />
+          <img className="form_img_3" src={apple} alt="form" />
+          <img className="form_img_4" src={orange} alt="form" />
           <span className="form_name">Login</span>
           <Input
             label="email"

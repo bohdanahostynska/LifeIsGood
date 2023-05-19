@@ -8,21 +8,12 @@ import { AuthContext } from "./context/AuthContext";
 import Loader from "./components/Loader";
 
 const links = [
-  { id: "1", link: "/", name: "Home" },
-  { id: "2", link: "register", name: "Register" },
-  { id: "3", link: "login", name: "Auth" },
-  { id: "4", link: "loader", name: "Loader" },
-  { id: "5", link: "menu", name: "MenuProducts" },
+  { id: "1", link: "/" },
+  { id: "2", link: "register" },
+  { id: "3", link: "login" },
+  { id: "4", link: "loader" },
+  { id: "5", link: "menu" },
 ];
-
-// const PrivateRoute = ({ children }) => {
-//   let { currentUser } = React.useContext(AuthContext);
-//   if (currentUser === null) {
-//     return <Navigate to="/login" />;
-//   }
-
-//   return children;
-// };
 
 const RouterApp = () => {
   const { currentUser } = React.useContext(AuthContext);
@@ -62,7 +53,8 @@ const RouterApp = () => {
           <Route path="/register" element={<Register />} />
           <Route
             path="/login"
-            element={currentUser ? <Navigate to="/" /> : <Auth />}
+            // element={currentUser ? <Navigate to="/loader" /> : <Auth />}
+            element={currentUser ? <Navigate to="/menu" /> : <Auth />}
           />
           {/* <Route path="/loader" element={<Loader />} /> */}
           <Route path="/menu" element={<MenuProducts />} />
