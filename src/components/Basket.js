@@ -59,7 +59,7 @@ function Basket() {
         </div>
       </div>
       <button className="basket_button" onClick={toggleOrderMoreBasket}>
-        Order - {totalPrice}&
+        Order - {totalPrice}$
       </button>
     </div>
   );
