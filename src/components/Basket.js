@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import Arrow from "../assets/basket/arrow.svg";
 import "../styles/Basket.scss";
 import { useSelector, useDispatch } from "react-redux";
@@ -13,7 +13,6 @@ function Basket() {
   const [quantity, setQuantity] = useState(1);
   const { categoryList } = useSelector((state) => state.categoryList);
   const { isOpenBasket } = useSelector((state) => state.categoryList);
-  const { isVisibleItem } = useSelector((state) => state.categoryList);
   const { isOpenOrderMoreBasket } = useSelector((state) => state.categoryList);
 
   const toggleOrderMoreBasket = () => {
