@@ -2,7 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   categoryList: [],
   isOpenBasket: false,
-  // isVisibleItem: false,
   quantity: 0,
   basketTotalAmount: 0,
   updatedItems: [],
@@ -28,10 +27,6 @@ const categoryListSlice = createSlice({
       ...state,
       isOpenOrderMoreBasket: !state.isOpenOrderMoreBasket,
     }),
-    // handleItemBasket: (state) => ({
-    //   ...state,
-    //   isVisibleItem: !state.isVisibleItem,
-    // }),
     handleItemBasket: (state, action) => {
       let index = state.categoryList.indexOf(action.payload);
       state.quantity -= action.payload;
