@@ -13,7 +13,6 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import Loader from "../components/Loader";
 import { setLoading } from "../redux/reducers/authSlice";
-import { Link } from "react-router-dom";
 
 function Auth() {
   const email = useInput();
@@ -41,7 +40,6 @@ function Auth() {
     <>
       {loading && <Loader />}
       <div className="form_container">
-        {/* {loading && <Loader />} */}
         <div className="form_header">
           <h2 className="main_title">Welcome To Yelp App</h2>
           <img className="drooling-face" src={Drooling} alt="drooling" />
