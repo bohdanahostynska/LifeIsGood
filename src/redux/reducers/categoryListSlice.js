@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   categoryList: [],
   isOpenBasket: false,
-  isVisibleItem: false,
+  // isVisibleItem: false,
   quantity: 0,
   basketTotalAmount: 0,
   updatedItems: [],
@@ -28,10 +28,20 @@ const categoryListSlice = createSlice({
       ...state,
       isOpenOrderMoreBasket: !state.isOpenOrderMoreBasket,
     }),
-    handleItemBasket: (state) => ({
-      ...state,
-      isVisibleItem: !state.isVisibleItem,
-    }),
+    // handleItemBasket: (state) => ({
+    //   ...state,
+    //   isVisibleItem: !state.isVisibleItem,
+    // }),
+    handleItemBasket: (state, action) => {
+      let index = state.categoryList.indexOf(action.payload);
+      state.quantity -= action.payload;
+      state.categoryList.splice(index, 1);
+      state.categoryList = [...state.categoryList];
+      const removeItem = state.categoryList.filter(
+        (item) => item.id !== action.payload
+      );
+      state.categoryList = removeItem;
+    },
   },
 });
 
@@ -41,6 +51,7 @@ export const {
   handleOrderMoreBasket,
   handleSearchClick,
   handleItemBasket,
+  removeItem,
 } = categoryListSlice.actions;
 
 export default categoryListSlice.reducer;

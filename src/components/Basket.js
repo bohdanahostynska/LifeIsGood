@@ -6,7 +6,6 @@ import {
   handleItemBasket,
   handleOpenBasket,
   handleOrderMoreBasket,
-  removeItem,
 } from "../redux/reducers/categoryListSlice";
 
 function Basket() {
@@ -33,10 +32,7 @@ function Basket() {
   };
 
   const removeItem = () => {
-    dispatch(handleItemBasket(!isVisibleItem));
-    isVisibleItem((prev) =>
-      prev.filter((item) => item.name === categoryList.name)
-    );
+    dispatch(handleItemBasket());
   };
 
   return (
