@@ -1,14 +1,16 @@
 .order_basket_container {
   background-color: white;
-  // position: fixed;
-  position: absolute;
-  padding-top: 100px;
-  right: 0;
+  position: fixed;
+  right: 19%;
   top: 50px;
+  height: 80%;
+  width: 350px;
   height: 700px;
-  width: 400px;
-  border-radius: 20px 0 0 20px;
+  border-radius: 20px 20px 20px 20px;
   z-index: 1200;
+  padding-bottom: 40px;
+  position: absolute;
+  cursor: pointer;
 
   .order_basket_content {
     padding: 100px 60px;
@@ -30,6 +32,7 @@
     width: 260px;
     height: 50px;
     background: #2d9cdb;
+    margin-left: 20px;
 
     margin-left: 10%;
     color: white;

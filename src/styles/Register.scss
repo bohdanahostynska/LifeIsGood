@@ -4,6 +4,9 @@
   background-color: #deebfb;
   padding-top: 90px;
   padding-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+
   .form_header {
     text-align: center;
     max-width: 400px;

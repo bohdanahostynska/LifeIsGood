@@ -1,14 +1,15 @@
 .basket_container {
   background-color: white;
   position: fixed;
-  right: 0;
+  right: 19%;
   top: 50px;
   height: 80%;
-  width: 400px;
+  width: 350px;
   height: 700px;
   border-radius: 20px 20px 20px 20px;
   z-index: 1200;
   padding-bottom: 40px;
+  position: absolute;
 
   .basket_button {
     display: block;
@@ -19,6 +20,7 @@
     background: #2d9cdb;
     margin-left: 20%;
     color: white;
+    cursor: pointer;
   }
   .basket_content {
     padding: 20px 20px;
@@ -34,6 +36,7 @@
     background-color: #f5f6f7;
     border-radius: 15px;
     padding: 20px;
+    cursor: pointer;
   }
   .basket_item {
     display: flex;
@@ -43,13 +46,14 @@
     width: 36px;
     height: 36px;
     margin-top: 20px;
-    margin-right: 20px;
+    margin-right: 10px;
+    cursor: pointer;
   }
   .basket_text {
-    width: 200px;
+    width: 180px;
   }
   .basket_price {
     margin-top: 15px;
-    margin-left: 40px;
+    margin-left: 20px;
   }
 }

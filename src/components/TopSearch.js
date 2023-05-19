@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import "../styles/TopSearch.scss";
 import Search from "../assets/menu/topsearch/search1.svg";
 import basket from "../assets/menu/topsearch/basket.svg";
 import Sign from "../assets/menu/topsearch/basket_sign.svg";
-import Basket from "./Basket";
 import { handleOpenBasket } from "../redux/reducers/categoryListSlice";
 
 function TopSearch() {

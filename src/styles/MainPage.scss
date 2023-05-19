@@ -5,15 +5,53 @@
   background-color: #fff;
   padding-top: 50px;
   padding-bottom: 200px;
+  display: flex;
+  flex-wrap: wrap;
 
   .main_list {
-    height: calc(100% - 100px);
-    overflow-y: auto;
+    height: calc(100% - 200px);
   }
 }
 
-@media screen and (max-width: 800px) {
-  .main_page {
-    background-color: red;
-  }
-}
+// @media screen and (max-width: 1250px) {
+//   .container {
+//     max-width: 1140px;
+//     display: flex;
+//     flex-direction: column;
+//   }
+// }
+// @media screen and (max-width: 1200px) {
+//   .container {
+//     max-width: 1040px;
+//   }
+// }
+// @media screen and (max-width: 1090px) {
+//   .container {
+//     max-width: 750px;
+//   }
+// }
+// @media screen and (max-width: 800px) {
+//   .container {
+//     max-width: 500px;
+//   }
+// }
+// @media screen and (max-width: 550px) {
+//   .container {
+//     max-width: 430px;
+//   }
+// }
+// @media screen and (max-width: 480px) {
+//   .container {
+//     max-width: 310px;
+//   }
+// }
+// @media screen and (max-width: 360px) {
+//   .container {
+//     max-width: 300px;
+//   }
+// }
+// @media screen and (max-width: 320px) {
+//   .container {
+//     max-width: 290px;
+//   }
+// }

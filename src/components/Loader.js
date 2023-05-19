@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/Loader.scss";
 import apple from "../assets/login/bitten-apple.svg";
 import grapes from "../assets/login/grapes.svg";
 import cheese from "../assets/menu/all_pic/articles/cheese 1.svg";

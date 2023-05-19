@@ -1,0 +1,44 @@
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+  margin-left: 0;
+  font-family: " League Spartan";
+  position: relative;
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    background-color: #deebfb;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    padding-top: 50px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .container {
+    max-width: 1140px;
+
+    background-color: chartreuse;
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  // @mixin respond-to($media) {
+  //   @if $media == handhelds {
+  //     @media only screen and (max-width: 479px) {
+  //       @content;
+  //     }
+  //   } @else if $media == wide-handhelds {
+  //     @media only screen and (min-width: 480px) and (max-width: 767px) {
+  //       @content;
+  //     }
+  //   } @else if $media == tablets {
+  //     @media only screen and (min-width: 768px) and (max-width: 959px) {
+  //       @content;
+  //     }
+  //   }
+  // }
+}

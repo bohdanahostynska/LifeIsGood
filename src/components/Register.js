@@ -1,5 +1,4 @@
 import React from "react";
-import { initializeApp } from "firebase/app";
 import Drooling from "../assets/menu/drooling-face.svg";
 import apple from "../assets/login/bitten-apple.svg";
 import grapes from "../assets/login/grapes.svg";
@@ -8,7 +7,7 @@ import orange from "../assets/login/orange.svg";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import Input from "./Input";
 import { useInput } from "../hooks/useInput";
-import { useNav } from "../context/useNav";
+import { useNav } from "../hooks/useNav";
 import "../styles/Register.scss";
 
 function Register() {

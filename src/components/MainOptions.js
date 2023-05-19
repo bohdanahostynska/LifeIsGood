@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/MainOptions.scss";
 import all from "../assets/menu/mainpic/all.svg";
 import burger from "../assets/menu/mainpic/burger.svg";
 import pizza from "../assets/menu/mainpic/pizza.svg";

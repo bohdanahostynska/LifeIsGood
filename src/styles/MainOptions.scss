@@ -1,12 +1,11 @@
-
 .main_options {
   z-index: 99;
   position: sticky;
-  
+
   &_list {
-     display: grid;
-      grid-template-columns: repeat(6, 100px);
-      gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(6, 100px);
+    gap: 30px;
   }
 
   &_item {
@@ -19,15 +18,14 @@
     list-style: none;
     box-sizing: border-box;
     z-index: 99;
-    position: sticky;
-
+    cursor: pointer;
 
     &:last-child {
       margin-right: 0;
     }
- 
-    &::marker{
-        text-decoration: none;
+
+    &::marker {
+      text-decoration: none;
     }
 
     &-title {
@@ -38,7 +36,6 @@
       color: #585858;
     }
 
-
     &-active {
       background: #ffffff;
       box-shadow: 0px 4px 46px rgba(0, 0, 0, 0.3);
@@ -48,16 +45,15 @@
         color: #000000;
         max-width: 100px;
       }
-    
-  }
-  .main_options_pic {
-    justify-content: center;
-     object-fit: cover;
+    }
+    .main_options_pic {
+      justify-content: center;
+      object-fit: cover;
       display: block;
-       width: 80px;
-       height: 76px;
-       margin-left: 10px;
-       margin-top: 10px;
-     }
- }
+      width: 80px;
+      height: 76px;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+  }
 }

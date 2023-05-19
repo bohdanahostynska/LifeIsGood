@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchedLoginData } from "./thunk";
 
 const initialState = {
   auth: null,

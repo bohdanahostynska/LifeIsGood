@@ -42,26 +42,9 @@ const RouterApp = () => {
           ))}
         </ul>
         <Routes>
-          {/* <Route
-            path="/"
-            element={
-              // <PrivateRoute>
-              <Home />
-              // </PrivateRoute>
-            }
-          /> */}
-          <Route
-            path="/"
-            element={
-              // <PrivateRoute>
-              <Register />
-              // </PrivateRoute>
-            }
-          />
-          {/* <Route path="/register" element={<Register />} /> */}
+          <Route path="/" element={<Register />} />
           <Route
             path="/login"
-            // element={currentUser ? <Navigate to="/loader" /> : <Auth />}
             element={currentUser ? <Navigate to="/menu" /> : <Auth />}
           />
           <Route path="/loader" element={<Loader />} />

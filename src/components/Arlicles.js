@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/Articles.scss";
 import Discount from "./Discount";
 import Arrow from "../assets/menu/all_pic/articles/arr.svg";
 

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Arrow from "../assets/basket/arrow.svg";
-import "../styles/Basket.scss";
 import { useSelector, useDispatch } from "react-redux";
 import {
   handleItemBasket,

@@ -1,6 +1,5 @@
 import React from "react";
 import Input from "./Input";
-import "../styles/Register.scss";
 import { useInput } from "../hooks/useInput";
 import Drooling from "../assets/menu/drooling-face.svg";
 import apple from "../assets/login/bitten-apple.svg";
@@ -8,11 +7,12 @@ import grapes from "../assets/login/grapes.svg";
 import leaf from "../assets/login/leaf 2.svg";
 import orange from "../assets/login/orange.svg";
 import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
-import { useNav } from "../context/useNav";
+import { useNav } from "../hooks/useNav";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import Loader from "../components/Loader";
 import { setLoading } from "../redux/reducers/authSlice";
+import "../styles/Auth.scss";
 
 function Auth() {
   const email = useInput();

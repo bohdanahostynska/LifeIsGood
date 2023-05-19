@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/OrderMoreBasket.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { handleOrderMoreBasket } from "../redux/reducers/categoryListSlice";
 import Stopwatch from "../assets/basket/stopwatch 1.svg";
