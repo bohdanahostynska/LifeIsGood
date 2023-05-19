@@ -25,11 +25,9 @@ function Basket() {
     (accumulator, currentValue) => accumulator + +currentValue.price.slice(1),
     0
   );
-
   const add = () => {
     setQuantity((prev) => prev + 1);
   };
-
   const removeItem = () => {
     dispatch(handleItemBasket());
   };

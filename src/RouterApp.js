@@ -9,10 +9,10 @@ import Loader from "./components/Loader";
 
 const links = [
   { id: "1", link: "/" },
-  { id: "2", link: "register" },
-  { id: "3", link: "login" },
-  { id: "4", link: "loader" },
-  { id: "5", link: "menu" },
+  { id: "2", link: "login" },
+  { id: "3", link: "loader" },
+  { id: "4", link: "menu" },
+  { id: "5", link: "home" },
 ];
 
 const RouterApp = () => {
@@ -42,15 +42,23 @@ const RouterApp = () => {
           ))}
         </ul>
         <Routes>
-          <Route
+          {/* <Route
             path="/"
             element={
               // <PrivateRoute>
               <Home />
               // </PrivateRoute>
             }
+          /> */}
+          <Route
+            path="/"
+            element={
+              // <PrivateRoute>
+              <Register />
+              // </PrivateRoute>
+            }
           />
-          <Route path="/register" element={<Register />} />
+          {/* <Route path="/register" element={<Register />} /> */}
           <Route
             path="/login"
             // element={currentUser ? <Navigate to="/loader" /> : <Auth />}
@@ -58,7 +66,7 @@ const RouterApp = () => {
           />
           <Route path="/loader" element={<Loader />} />
           <Route path="/menu" element={<MenuProducts />} />
-
+          <Route path="/home" element={<Home />} />
           <Route path="*" element={<Navigate to="/login" />} />
         </Routes>
       </nav>

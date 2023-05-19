@@ -6,6 +6,7 @@ const initialState = {
   basketTotalAmount: 0,
   updatedItems: [],
   isOpenOrderMoreBasket: false,
+  active: true,
 };
 const categoryListSlice = createSlice({
   name: "categoryList",
@@ -37,6 +38,9 @@ const categoryListSlice = createSlice({
       );
       state.categoryList = removeItem;
     },
+    toggleSwitch: (state) => {
+      state.active = !state.active;
+    },
   },
 });
 
@@ -47,6 +51,7 @@ export const {
   handleSearchClick,
   handleItemBasket,
   removeItem,
+  toggleSwitch,
 } = categoryListSlice.actions;
 
 export default categoryListSlice.reducer;
