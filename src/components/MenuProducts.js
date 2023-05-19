@@ -15,7 +15,7 @@ const list = [
     title: "Home",
     name: "Home",
     svgName: "home",
-    link: "/",
+    link: "/home",
   },
   {
     id: 2,
