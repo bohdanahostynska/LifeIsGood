@@ -1,28 +1,28 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Arrow from "../assets/basket/arrow.svg";
 import "../styles/Basket.scss";
 import { useSelector, useDispatch } from "react-redux";
 import {
+  handleItemBasket,
   handleOpenBasket,
   handleOrderMoreBasket,
   removeItem,
 } from "../redux/reducers/categoryListSlice";
 
 function Basket() {
-  // const { setCategoryList } = useSelector((state) => state.categoryList);
   const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(1);
   const { categoryList } = useSelector((state) => state.categoryList);
   const { isOpenBasket } = useSelector((state) => state.categoryList);
+  const { isVisibleItem } = useSelector((state) => state.categoryList);
   const { isOpenOrderMoreBasket } = useSelector((state) => state.categoryList);
 
-  const toggleBasket = () => {
-    dispatch(handleOpenBasket(!isOpenBasket));
-  };
   const toggleOrderMoreBasket = () => {
     dispatch(handleOrderMoreBasket(!isOpenOrderMoreBasket));
   };
-
+  const toggleBasket = () => {
+    dispatch(handleOpenBasket(!isOpenBasket));
+  };
   const totalPrice = categoryList.reduce(
     (accumulator, currentValue) => accumulator + +currentValue.price.slice(1),
     0
@@ -32,24 +32,12 @@ function Basket() {
     setQuantity((prev) => prev + 1);
   };
 
-  // categoryList = [{ id: "" }, { id: "" }];
-
-  // const newItem = { id: 1 };
-  // if (categoryList.some((el) => el.id === newItem.id)) {
-  //   const newData = list.map((item) => {
-  //     if (item.id === newItem.id) {
-  //       return {
-  //         ...item,
-  //         quantity: (item?.quantity || 0) + 1,
-  //       };
-  //     }
-  //     return item;
-  //   });
-  //   dispatch(setategoryList(newData));
-  //   return;
-  // } else {
-  //   dispatch(setCategoryList([...categoryList, newItem]));
-  // }
+  const removeItem = () => {
+    dispatch(handleItemBasket(!isVisibleItem));
+    isVisibleItem((prev) =>
+      prev.filter((item) => item.name === categoryList.name)
+    );
+  };
 
   return (
     <div className="basket_container">
@@ -65,7 +53,7 @@ function Basket() {
         </div>
         <div className="basket_body">
           {categoryList.map(({ price, text, title, image }, idx) => (
-            <div className="basket_item" key={idx}>
+            <div className="basket_item" key={idx} onClick={removeItem}>
               <img className="basket_image" src={image} alt="img" />
               <div className="basket_details">
                 <h3 className="basket_title">{title}</h3>

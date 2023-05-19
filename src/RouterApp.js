@@ -56,7 +56,7 @@ const RouterApp = () => {
             // element={currentUser ? <Navigate to="/loader" /> : <Auth />}
             element={currentUser ? <Navigate to="/menu" /> : <Auth />}
           />
-          {/* <Route path="/loader" element={<Loader />} /> */}
+          <Route path="/loader" element={<Loader />} />
           <Route path="/menu" element={<MenuProducts />} />
 
           <Route path="*" element={<Navigate to="/login" />} />

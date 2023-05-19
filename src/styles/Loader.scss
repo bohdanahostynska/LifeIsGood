@@ -1,14 +1,14 @@
 .loader_wrapper {
-  margin: 0 auto;
   background-color: #deebfb;
-  padding-top: 101px;
+  padding-top: 150px;
   padding-bottom: 110px;
   position: relative;
   z-index: 1500;
-
+  opacity: 0.33;
+  margin: 0 auto;
+  max-width: 1800px;
+  height: 800px;
   .loader_content {
-    max-width: 1400px;
-    margin: 0 auto;
     border-radius: 35px;
     padding-top: 76px;
     padding-bottom: 57px;
