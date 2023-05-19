@@ -15,7 +15,21 @@
     box-sizing: border-box;
     position: relative;
   }
-
+  &_top {
+    display: flex;
+    margin-left: 100px;
+  }
+  &_toggle {
+    display: block;
+    width: 25px;
+    height: 19px;
+    margin-top: 30px;
+  }
+  &_title-main {
+    font-size: 24px;
+    line-height: 27px;
+    margin-right: 30px;
+  }
   &_img {
     position: absolute;
 

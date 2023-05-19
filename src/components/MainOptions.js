@@ -6,6 +6,7 @@ import pizza from "../assets/menu/mainpic/pizza.svg";
 import salads from "../assets/menu/mainpic/salads.svg";
 import donut from "../assets/menu/mainpic/donut.svg";
 import drinks from "../assets/menu/mainpic/drinks.svg";
+import Filter from "../assets/menu/all_pic/articles/filter.svg";
 
 export const categoryList = [
   { id: 1, title: "all", name: "all", icon: all },
@@ -22,27 +23,33 @@ const MainOptions = ({ currentFilter, setFilter }) => {
   };
 
   return (
-    <nav className="main_options">
-      <ul className="main_options_list">
-        {categoryList.map(({ title, name, icon, index }) => (
-          <li
-            key={name}
-            className={
-              currentFilter.name === name
-                ? "main_options_item main_options_item-active"
-                : "main_options_item"
-            }
-            onClick={() => click(name)}
-          >
-            <div className="main_options_pic">
-              <img src={icon} alt="options" />
-            </div>
-            <p className="options_title">{title}</p>
-            <p className="options_title">{index}</p>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <>
+      <nav className="main_options">
+        <ul className="main_options_list">
+          {categoryList.map(({ title, name, icon, index }) => (
+            <li
+              key={name}
+              className={
+                currentFilter.name === name
+                  ? "main_options_item main_options_item-active"
+                  : "main_options_item"
+              }
+              onClick={() => click(name)}
+            >
+              <div className="main_options_pic">
+                <img src={icon} alt="options" />
+              </div>
+              <p className="options_title">{title}</p>
+              <p className="options_title">{index}</p>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <div className="all_items_top">
+        <h3 className="all_items_title-main">All Items</h3>
+        <img className="all_items_toggle" src={Filter} alt="tog" />
+      </div>
+    </>
   );
 };
 

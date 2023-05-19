@@ -5,7 +5,6 @@ import { createCategoryList } from "../redux/reducers/categoryListSlice";
 import { useDispatch } from "react-redux";
 import "../styles/AllItems.scss";
 import { allFood } from "../data/foodData";
-import Filter from "../assets/menu/all_pic/articles/filter.svg";
 
 function AllItems({ currentFilter }) {
   const dispatch = useDispatch();
@@ -24,12 +23,7 @@ function AllItems({ currentFilter }) {
   return (
     <>
       <div className="all_items_content">
-        <div className="all_items_header">
-          <div className="all_items_top">
-            <h3 className="all_items_title">All Items</h3>
-            <img className="all_items_toggle" src={Filter} alt="tog" />
-          </div>
-        </div>
+        <div className="all_items_header"></div>
         {data.map(
           ({
             title,
