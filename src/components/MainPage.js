@@ -5,6 +5,7 @@ import AllItems from "./AllItems";
 import Basket from "./Basket";
 import { useSelector } from "react-redux";
 import OrderMoreBasket from "./OrderMoreBasket";
+import Articles from "./Arlicles";
 
 function MainPage() {
   const [filter, setFilter] = useState(categoryList[0]);
@@ -21,6 +22,7 @@ function MainPage() {
         {isOpenBasket && <Basket />}
         {isOpenOrderMoreBasket && <OrderMoreBasket />}
       </div>
+      <Articles />
     </div>
   );
 }

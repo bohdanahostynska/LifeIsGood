@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import UserItem from "./UserItem";
 import DeliveryGuy from "./DeliveryGuy";
 import MainPage from "./MainPage";
-import Articles from "./Arlicles";
 import { Icon } from "../icons";
 
 const list = [
@@ -73,7 +72,6 @@ export const MenuProducts = () => {
           <DeliveryGuy />
         </div>
         <MainPage />
-        <Articles />
       </div>
     </div>
   );

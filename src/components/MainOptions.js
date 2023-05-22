@@ -36,7 +36,7 @@ const MainOptions = ({ currentFilter, setFilter }) => {
               onClick={() => click(name)}
             >
               <div className="main_options_pic">
-                <img src={icon} alt="options" />
+                <img src={icon} className="main_options_img" alt="options" />
               </div>
               <p className="options_title">{title}</p>
               <p className="options_title">{index}</p>

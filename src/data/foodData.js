@@ -106,7 +106,7 @@ const salads = [
     title: "What's up,salad?",
     category: "salad",
     image: salad_1,
-    text: "Royal food at your service!Order our amazing salmon and feel like a king.",
+    text: "Royal food at your service!Order our amazing salad and feel like a king.",
     price: "$60",
   },
   {
@@ -114,7 +114,7 @@ const salads = [
     title: "What's up,salad?",
     category: "salad",
     image: salad_2,
-    text: "Royal food at your service!Order our amazing salmon and feel like a king.",
+    text: "Royal food at your service!Order our amazing salad and feel like a king.",
     price: "$60",
   },
   {
@@ -122,7 +122,7 @@ const salads = [
     title: "What's up,salad?",
     category: "salad",
     image: salad_3,
-    text: "Royal food at your service!Order our amazing salmon and feel like a king.",
+    text: "Royal food at your service!Order our amazing salad and feel like a king.",
     price: "$60",
   },
 ];

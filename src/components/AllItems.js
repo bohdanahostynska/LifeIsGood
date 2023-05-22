@@ -4,7 +4,10 @@ import Flame from "../assets/menu/all_pic/fire.svg";
 import { createCategoryList } from "../redux/reducers/categoryListSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { allFood } from "../data/foodData";
-import { toggleSwitch } from "../redux/reducers/categoryListSlice";
+import {
+  toggleSwitch,
+  toggleBasket,
+} from "../redux/reducers/categoryListSlice";
 
 function AllItems({ currentFilter }) {
   const dispatch = useDispatch();
@@ -40,7 +43,13 @@ function AllItems({ currentFilter }) {
         }) => (
           <div className="all_items_all" key={category + id}>
             <img className="all_items_img" src={image} alt="all_images" />
-            <button className="all_items_button" onClick={handleOnClickIcon}>
+            <button
+              className="all_items_button"
+              onClick={() => {
+                handleOnClickIcon();
+                toggleBasket();
+              }}
+            >
               <img className="all_items_image" src={Flame} alt="all_images" />
             </button>
 

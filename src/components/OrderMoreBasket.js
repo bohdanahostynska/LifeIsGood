@@ -1,6 +1,9 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { handleOrderMoreBasket } from "../redux/reducers/categoryListSlice";
+import {
+  handleOrderMoreBasket,
+  clearResults,
+} from "../redux/reducers/categoryListSlice";
 import Stopwatch from "../assets/basket/stopwatch 1.svg";
 function OrderMoreBasket() {
   const { isOpenBasket } = useSelector((state) => state.categoryList);
@@ -8,6 +11,7 @@ function OrderMoreBasket() {
   const toggleOrderMoreBasket = () => {
     dispatch(handleOrderMoreBasket(!isOpenBasket));
   };
+
   return (
     <div className="order_basket_container">
       <div className="order_basket_content">
@@ -16,7 +20,9 @@ function OrderMoreBasket() {
           <h4 className="order_basket_text">in the process of cooking...</h4>
           <button
             className="order_basket_button"
-            onClick={toggleOrderMoreBasket}
+            onClick={() => {
+              toggleOrderMoreBasket();
+            }}
           >
             Order more
           </button>

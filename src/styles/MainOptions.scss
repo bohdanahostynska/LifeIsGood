@@ -6,6 +6,7 @@
     display: grid;
     grid-template-columns: repeat(6, 100px);
     gap: 30px;
+    cursor: pointer;
   }
 
   &_item {
@@ -54,6 +55,10 @@
       height: 76px;
       margin-left: 10px;
       margin-top: 10px;
+    }
+    .main_options_img {
+      width: 80px;
+      height: 70px;
     }
   }
 }

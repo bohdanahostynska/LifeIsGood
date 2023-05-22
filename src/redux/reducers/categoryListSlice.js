@@ -52,6 +52,7 @@ export const {
   handleItemBasket,
   removeItem,
   toggleSwitch,
+  toggleBasket,
 } = categoryListSlice.actions;
 
 export default categoryListSlice.reducer;
