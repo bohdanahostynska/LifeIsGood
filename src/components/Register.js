@@ -26,7 +26,8 @@ function Register() {
 
       goTo("/login");
     } catch (error) {
-      console.log({ error });
+      const errorMessage = error.message;
+      console.log(errorMessage);
     }
   };
 

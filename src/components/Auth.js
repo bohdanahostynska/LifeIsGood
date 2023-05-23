@@ -11,13 +11,14 @@ import { useNav } from "../hooks/useNav";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import Loader from "../components/Loader";
+import { useNavigate } from "react-router-dom";
 import { setLoading } from "../redux/reducers/authSlice";
-import "../styles/Auth.scss";
 
 function Auth() {
   const email = useInput();
   const pass = useInput();
   const auth = getAuth();
+  const navigate = useNavigate();
   const { goTo } = useNav();
   const dispatch = useDispatch();
   const { loading } = useSelector((state) => state.auth);
@@ -31,9 +32,10 @@ function Auth() {
         dispatch(setLoading(false));
         goTo("/menu");
       }, 4000);
-    } catch (error) {
-      console.log({ error });
-    }
+    } catch (error) {}
+  };
+  const onClick = () => {
+    navigate("/");
   };
 
   return (
@@ -70,7 +72,11 @@ function Auth() {
             <button className="button" type="submit">
               Login
             </button>
-            <li className="form_text" style={{ listStyle: "none" }}>
+            <li
+              className="form_text"
+              onClick={onClick}
+              style={{ listStyle: "none" }}
+            >
               don't have an account
             </li>
           </form>

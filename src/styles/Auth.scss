@@ -36,6 +36,7 @@
     text-align: center;
     max-width: 400px;
     margin: 0 auto;
+    display: flex;
   }
   .main_title {
     position: relative;
@@ -79,8 +80,10 @@
   .form_wrap {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     text-align: start;
-    margin-left: 100px;
+    margin-left: 70px;
+    margin-right: 70px;
   }
 
   .form_name {
@@ -96,5 +99,12 @@
     color: white;
     border-radius: 15px;
     margin-left: 110px;
+    border: none;
+    margin-bottom: 20px;
+  }
+
+  .form_text {
+    margin: 0 auto;
+    display: inline-block;
   }
 }
