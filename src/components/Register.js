@@ -8,7 +8,6 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import Input from "./Input";
 import { useInput } from "../hooks/useInput";
 import { useNav } from "../hooks/useNav";
-import "../styles/Register.scss";
 
 function Register() {
   const email = useInput();

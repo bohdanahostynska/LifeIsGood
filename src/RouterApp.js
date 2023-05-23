@@ -8,7 +8,7 @@ import { AuthContext } from "./context/AuthContext";
 import Loader from "./components/Loader";
 
 const links = [
-  { id: "1", link: "/" },
+  { id: "1", link: "register" },
   { id: "2", link: "login" },
   { id: "3", link: "loader" },
   { id: "4", link: "menu" },
@@ -50,7 +50,7 @@ const RouterApp = () => {
           <Route path="/loader" element={<Loader />} />
           <Route path="/menu" element={<MenuProducts />} />
           <Route path="/home" element={<Home />} />
-          <Route path="*" element={<Navigate to="/login" />} />
+          <Route path="*" element={<Navigate to="/register" />} />
         </Routes>
       </nav>
     </div>
