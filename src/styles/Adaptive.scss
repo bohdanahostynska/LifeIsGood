@@ -2,13 +2,16 @@
   .container {
     max-width: 1250px;
     .wrapper {
+      margin-left: 0;
       .features {
         margin-right: 0;
+        margin-left: 0;
       }
 
       .main_page {
         border-bottom-left-radius: 0;
         flex-wrap: nowrap;
+        margin-right: 80px;
       }
       .main_list {
         height: 100%;
@@ -105,6 +108,7 @@
         justify-content: center;
         border-bottom-left-radius: 0;
         flex-wrap: wrap;
+        margin-right: 80px;
 
         .main_list {
           height: fit-content;

@@ -2,11 +2,14 @@
   max-width: 100%;
   border-top-left-radius: 60px;
   border-bottom-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
   background-color: #fff;
   padding-top: 50px;
   padding-bottom: 200px;
   display: flex;
   flex-wrap: wrap;
+  margin-right: 80px;
 
   .main_list {
     // height: calc(100% - 200px);

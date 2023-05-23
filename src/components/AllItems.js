@@ -5,7 +5,6 @@ import Tick from "..//assets/menu/all_pic/tick.svg";
 import { createCategoryList } from "../redux/reducers/categoryListSlice";
 import { useDispatch } from "react-redux";
 import { allFood } from "../data/foodData";
-import { toggleBasket } from "../redux/reducers/categoryListSlice";
 
 function AllItems({ currentFilter }) {
   const dispatch = useDispatch();
@@ -51,16 +50,14 @@ function AllItems({ currentFilter }) {
         }) => (
           <div className="all_items_all" key={category + id}>
             <img className="all_items_img" src={image} alt="all_images" />
+
             <button
               className="all_items_button"
               onClick={() => {
                 handleOnClickIcon();
-                toggleBasket();
               }}
-            >
-              <img className="all_items_image" src={Flame} alt="all_images" />
-            </button>
-
+            ></button>
+            <img className="all_items_image" src={Flame} alt="all_images" />
             <div className="all_items_bottom">
               <h3 className="all_items_title">{title}</h3>
               <p className="all_items_text">{text}</p>
@@ -69,7 +66,7 @@ function AllItems({ currentFilter }) {
                 <p className="all_items_price">{index}</p>
                 <div
                   className=" all_items_icon"
-                  style={{ background: "transparent" }}
+                  style={{ background: "black" }}
                   onClick={() =>
                     handleOnClick({
                       image,
@@ -83,14 +80,9 @@ function AllItems({ currentFilter }) {
                   }
                 >
                   {activeSpan ? (
-                    <img className="plus" src={Tick} alt="tick" />
+                    <img className="all_items_tick" src={Tick} alt="tick" />
                   ) : (
-                    <img
-                      className="plus"
-                      src={Plus}
-                      alt="plus"
-                      style={{ background: "black" }}
-                    />
+                    <img className="all_items_plus" src={Plus} alt="plus" />
                   )}
                 </div>
               </div>
