@@ -20,9 +20,9 @@ const categoryListSlice = createSlice({
       ...state,
       categoryList: [],
     }),
-    handleOpenBasket: (state) => ({
+    handleOpenBasket: (state, { payload }) => ({
       ...state,
-      isOpenBasket: !state.isOpenBasket,
+      isOpenBasket: payload || !state.isOpenBasket,
     }),
     handleOrderMoreBasket: (state) => ({
       ...state,
@@ -46,6 +46,7 @@ const categoryListSlice = createSlice({
 
 export const {
   createCategoryList,
+  clearCategoryList,
   handleOpenBasket,
   handleOrderMoreBasket,
   handleSearchClick,

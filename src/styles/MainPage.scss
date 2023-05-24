@@ -8,12 +8,16 @@
   padding-top: 50px;
   padding-bottom: 200px;
   display: flex;
-  flex-wrap: wrap;
-  margin-right: 80px;
+  flex-direction: column;
+  width: 100%;
+  margin-right: 30px;
 
-  .main_list {
-    // height: calc(100% - 200px);
-    height: fit-content;
-    margin-bottom: 10px;
+  .main_content {
+    display: flex;
+    .main_list {
+      // height: calc(100% - 200px);
+      height: fit-content;
+      margin-bottom: 10px;
+    }
   }
 }

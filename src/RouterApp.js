@@ -20,27 +20,27 @@ const RouterApp = () => {
   return (
     <div className="container">
       <nav className="header_nav">
-        <ul className="header-ul">
-          {links.map(({ id, link, name }) => (
-            <li
-              key={id}
-              className="nav_item"
-              style={{ listStyle: "none", textDecoration: "none" }}
+        {/* <ul className="header-ul"> */}
+        {links.map(({ id, link, name }) => (
+          <li
+            key={id}
+            className="nav_item"
+            style={{ listStyle: "none", textDecoration: "none" }}
+          >
+            <NavLink
+              className="nav_link"
+              style={({ isActive }) => {
+                return {
+                  backgroundColor: isActive ? "grey" : "transparent",
+                };
+              }}
+              to={link}
             >
-              <NavLink
-                className="nav_link"
-                style={({ isActive }) => {
-                  return {
-                    backgroundColor: isActive ? "grey" : "transparent",
-                  };
-                }}
-                to={link}
-              >
-                {name}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
+              {name}
+            </NavLink>
+          </li>
+        ))}
+        {/* </ul> */}
         <Routes>
           <Route path="/" element={<Register />} />
           <Route

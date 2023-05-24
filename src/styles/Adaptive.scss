@@ -1,251 +1,191 @@
 @media screen and (max-width: 1400px) {
   .container {
-    max-width: 1250px;
+    max-width: 100%;
+    margin: 0 auto;
     .wrapper {
       margin-left: 0;
       .features {
         margin-right: 0;
         margin-left: 0;
+        flex-wrap: wrap;
       }
 
       .main_page {
         border-bottom-left-radius: 0;
-        flex-wrap: nowrap;
         margin-right: 80px;
+        flex-wrap: wrap;
+        height: fit-content;
       }
       .main_list {
         height: 100%;
-        margin-bottom: 150px;
       }
-      .articles_content {
-        display: flex;
-        // flex-direction: row-reverse;
-        flex-direction: column;
-        margin-top: 120px;
-      }
+
       .basket_container {
-        position: fixed;
-        right: 10px;
-        bottom: 90%;
-        height: 480px;
-        width: 260px;
-        padding-top: 10px;
-        padding-bottom: 150px;
-
-        .basket_content {
-          max-width: 250px;
-          padding-left: 10px;
-
-          .basket_details {
-            max-width: 100px;
-            .basket_price {
-              margin-top: 0;
-            }
-          }
-        }
-        .basket_button {
-          width: 160px;
-        }
+        top: 50px;
+        right: 5.9%;
       }
       .order_basket_container {
-        position: fixed;
-        right: 10px;
-        bottom: 90%;
-        height: 480px;
-        width: 260px;
-        padding-top: 40px;
-
-        .order_basket_content {
-          max-width: 250px;
-          padding-left: 10px;
-
-          .order_basket_button {
-            width: 160px;
-
-            margin-left: 30px;
-          }
-        }
+        top: 50px;
+        right: 5.9%;
+        padding: 50px 30px;
       }
     }
   }
 }
+
 @media screen and (max-width: 1250px) {
   .container {
-    max-width: 1140px;
-    display: flex;
-    flex-direction: column;
+    .features {
+      margin-right: 0;
+      margin-left: 0;
+      flex-wrap: wrap;
+    }
 
-    border-top-left-radius: 60px;
-    border-top-right-radius: 60px;
-
-    .wrapper {
+    .articles_content {
       display: flex;
-      flex-direction: column;
-      background-color: #deebfb;
-      border-top-right-radius: 60px;
-      border-bottom-right-radius: 60px;
-
-      .features {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        border-top-left-radius: 60px;
-        border-top-right-radius: 60px;
-        padding-top: 0;
-        margin-right: 0;
-
-        .user_wrapper {
-          padding: 0;
-          max-width: 100%;
-          margin-bottom: 0;
-        }
-        .menu-link {
-          cursor: pointer;
-        }
-      }
-      .main_page {
-        border-top-left-radius: 0;
-        justify-content: center;
-        border-bottom-left-radius: 0;
-        flex-wrap: wrap;
-        margin-right: 80px;
-
-        .main_list {
-          height: fit-content;
-          margin-bottom: 10px;
-        }
-
-        .header {
-          margin: 0 auto;
-        }
-
-        .all_items_content {
-          height: fit-content;
-        }
-        .all_items_top {
-          justify-content: center;
-          margin-left: 0;
-          margin-top: 50px;
-        }
-        .all_items_bottom {
-          margin-bottom: 40px;
-        }
-        .all_items_all {
-          height: 300px;
-        }
-      }
-
-      .articles_content {
-        background-color: none;
-        display: flex;
-        flex-direction: row-reverse;
-        margin-top: 0;
-
-        .articles_header {
-          top: 0;
-        }
-      }
-
-      .basket_container {
-        position: fixed;
-        right: 10px;
-        bottom: 90%;
-        height: 480px;
-        width: 260px;
-        padding-top: 10px;
-        padding-bottom: 150px;
-
-        .basket_content {
-          max-width: 250px;
-          padding-left: 10px;
-
-          .basket_details {
-            max-width: 100px;
-            .basket_price {
-              margin-top: 0;
-            }
-          }
-        }
-        .basket_button {
-          width: 160px;
-        }
-      }
-      .order_basket_container {
-        position: fixed;
-        right: 10px;
-        bottom: 90%;
-        height: 480px;
-        width: 260px;
-        padding-top: 40px;
-
-        .order_basket_content {
-          max-width: 250px;
-          padding-left: 10px;
-
-          .order_basket_button {
-            width: 160px;
-
-            margin-left: 30px;
-          }
-        }
-      }
+      flex-direction: column-reverse;
     }
   }
 }
 @media screen and (max-width: 1200px) {
   .container {
-    max-width: 1040px;
-    height: 400px;
-    .wrapper {
-      padding-top: 50px;
-      .basket_content {
-        padding-bottom: 0;
-      }
-    }
-    .articles_content {
-      background-color: none;
-      margin-top: 150px;
-    }
   }
 }
 @media screen and (max-width: 1090px) {
   .container {
-    // max-width: 750px;
+    max-width: 100%;
 
-    .features {
-      padding-right: 50px;
-      .guy {
-        margin-right: 50px;
-      }
-    }
-
-    .main_list {
-      margin-right: 100px;
+    .wrapper {
+      margin-left: 0;
     }
   }
 }
-// @media screen and (max-width: 800px) {
-//   .container {
-//     max-width: 500px;
-//   }
-// }
-// @media screen and (max-width: 550px) {
-//   .container {
-//     max-width: 430px;
-//   }
-// }
-// @media screen and (max-width: 480px) {
-//   .container {
-//     max-width: 310px;
-//   }
-// }
-// @media screen and (max-width: 360px) {
-//   .container {
-//     max-width: 300px;
-//   }
-// }
-// @media screen and (max-width: 320px) {
-//   .container {
-//     max-width: 290px;
-//   }
-// }
+@media screen and (max-width: 800px) {
+  .container {
+    .top_nav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      display: none;
+    }
+    .header_left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: start;
+      .drooling-face {
+        max-width: 100%;
+        width: 64px;
+        height: 66px;
+        align-self: start;
+      }
+      display: none;
+    }
+    .main_page {
+      display: flex;
+      flex-direction: column;
+      .main_bottom {
+        display: flex;
+        flex-direction: column;
+      }
+      .articles_content {
+        display: flex;
+        max-width: 100%;
+        flex-direction: column;
+        margin: 0 auto;
+        align-items: flex-start;
+        padding-right: 20px;
+        display: none;
+
+        .articles_img_fifth {
+          max-width: 80%;
+          top: -50%;
+          left: 40%;
+          width: 20px;
+        }
+        .articles_header {
+          width: 100%;
+          max-width: 100%;
+          margin: 150px auto 20px;
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .container {
+    margin: 0 auto;
+    max-width: 100%;
+    .header_left {
+      max-width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .drooling-face {
+      max-width: 100%;
+      width: 64px;
+      height: 66px;
+    }
+    .top_nav {
+      align-items: flex-start;
+    }
+    .basket_container {
+      top: 50px;
+      left: 2%;
+    }
+    .articles_img_fifth {
+      max-width: 70%;
+      top: -50%;
+      left: 17%;
+    }
+    .order_basket_container {
+      top: 50px;
+      left: 2%;
+
+      .order_basket_content {
+        padding: 50px 20px 0 10px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .container {
+    .header_left {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .drooling-face {
+      max-width: 100%;
+      width: 64px;
+      height: 66px;
+    }
+    .header_title {
+      max-width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 360px) {
+  .container {
+    .header {
+      margin: auto;
+    }
+    .header_title {
+      max-width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  .container {
+    .header {
+      margin: auto;
+    }
+    .header_title {
+      max-width: 100%;
+      margin: auto;
+    }
+  }
+}

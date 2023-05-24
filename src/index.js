@@ -8,6 +8,7 @@ import * as fb from "firebase/app";
 import { firebaseConfig } from "./base";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
+import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

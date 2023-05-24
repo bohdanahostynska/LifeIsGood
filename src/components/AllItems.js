@@ -1,85 +1,56 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Plus from "../assets/menu/all_pic/plus.svg";
 import Flame from "../assets/menu/all_pic/fire.svg";
 import Tick from "..//assets/menu/all_pic/tick.svg";
-import { createCategoryList } from "../redux/reducers/categoryListSlice";
-import { useDispatch } from "react-redux";
+import {
+  createCategoryList,
+  handleOpenBasket,
+} from "../redux/reducers/categoryListSlice";
+import { useDispatch, useSelector } from "react-redux";
 import { allFood } from "../data/foodData";
+
+const checkKey = (item, list, key) => list.some((el) => el[key] === item[key]);
 
 function AllItems({ currentFilter }) {
   const dispatch = useDispatch();
-
-  const [activeSpan, setActiveSpan] = useState(false);
+  const { categoryList } = useSelector((state) => state.categoryList);
 
   const handleOnClick = (item) => {
     dispatch(createCategoryList(item));
-    setActiveSpan(!activeSpan);
+    dispatch(handleOpenBasket(true));
+  };
 
-    if (!activeSpan) {
-      createCategoryList(item);
-    }
-  };
-  const handleOnClickIcon = (item) => {
-    dispatch(createCategoryList(item));
-  };
   const data =
     currentFilter.name === "all"
       ? allFood
       : allFood.filter((el) => el.category === currentFilter.name);
 
-  useEffect(() => {
-    if (!currentFilter.id) {
-      setActiveSpan(false);
-    }
-  }, [currentFilter.id]);
-
   return (
     <div className="all_items_content">
-      <div className="all_items_header"></div>
-      {data.map(
-        ({
-          title,
-          category,
-          image,
-          text,
-          price,
-          icon,
-          quantity,
-          id,
-          index,
-        }) => (
+      {data.map((item) => {
+        const { title, category, image, text, price, id, index } = item;
+        return (
           <div className="all_items_all" key={category + id}>
             <img className="all_items_img" src={image} alt="all_images" />
 
-            <button
-              className="all_items_button"
-              onClick={() => {
-                handleOnClickIcon();
-              }}
-            ></button>
             <img className="all_items_image" src={Flame} alt="all_images" />
             <div className="all_items_bottom">
-              <h3 className="all_items_title">{title}</h3>
+              <h3 className="all_items_title">
+                {title} {id}
+              </h3>
               <p className="all_items_text">{text}</p>
               <div className="all_items_add">
                 <p className="all_items_price">{price}</p>
-                <p className="all_items_price">{index}</p>
                 <div
                   className=" all_items_icon"
                   style={{ background: "black" }}
                   onClick={() =>
-                    handleOnClick({
-                      image,
-                      price,
-                      text,
-                      title,
-                      quantity,
-                      id,
-                      icon,
-                    })
+                    checkKey(item, categoryList, "id")
+                      ? undefined
+                      : handleOnClick(item)
                   }
                 >
-                  {activeSpan ? (
+                  {checkKey(item, categoryList, "id") ? (
                     <img className="all_items_tick" src={Tick} alt="tick" />
                   ) : (
                     <img className="all_items_plus" src={Plus} alt="plus" />
@@ -88,8 +59,8 @@ function AllItems({ currentFilter }) {
               </div>
             </div>
           </div>
-        )
-      )}
+        );
+      })}
     </div>
   );
 }

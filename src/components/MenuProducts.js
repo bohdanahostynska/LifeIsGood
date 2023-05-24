@@ -3,6 +3,7 @@ import UserItem from "./UserItem";
 import DeliveryGuy from "./DeliveryGuy";
 import MainPage from "./MainPage";
 import { Icon } from "../icons";
+import Header from "./Header";
 
 const list = [
   {

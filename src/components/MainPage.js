@@ -12,17 +12,20 @@ function MainPage() {
   const { isOpenBasket } = useSelector((state) => state.categoryList);
   const { isOpenOrderMoreBasket } = useSelector((state) => state.categoryList);
 
-  console.log(filter);
   return (
     <div className="main_page">
-      <div className="main_list">
-        <Header />
-        <MainOptions currentFilter={filter} setFilter={setFilter} />
-        <AllItems currentFilter={filter} />
-        {isOpenBasket && <Basket />}
-        {isOpenOrderMoreBasket && <OrderMoreBasket />}
+      <Header />
+      <div className="main_content">
+        <div className="main_list">
+          <MainOptions currentFilter={filter} setFilter={setFilter} />
+          <div className="main_bottom">
+            <AllItems currentFilter={filter} />
+            {isOpenBasket && <Basket />}
+            {isOpenOrderMoreBasket && <OrderMoreBasket />}
+          </div>
+          <Articles />
+        </div>
       </div>
-      <Articles />
     </div>
   );
 }

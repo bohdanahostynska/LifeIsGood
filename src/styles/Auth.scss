@@ -45,10 +45,10 @@
     font-size: 48px;
     line-height: 65px;
     display: flex;
+    margin: 0 auto;
+    margin-left: 20px;
   }
   .drooling-face {
-    // left: 56%;
-    // top: 280px;
     display: inline-block;
     margin-right: 40px;
   }
@@ -100,7 +100,7 @@
     border-radius: 15px;
     margin-left: 110px;
     border: none;
-    margin-bottom: 20px;
+    margin: 10px auto;
   }
 
   .form_text {

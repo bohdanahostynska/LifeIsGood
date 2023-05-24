@@ -50,7 +50,7 @@ const burgers = [
 ];
 const pizza = [
   {
-    id: 1,
+    id: 11,
     title: "Grab some pizza!",
     category: "pizza",
     image: pizza_1,
@@ -58,7 +58,7 @@ const pizza = [
     price: "$56",
   },
   {
-    id: 2,
+    id: 12,
     title: "Grab some pizza!",
     category: "pizza",
     image: pizza_2,
@@ -66,7 +66,7 @@ const pizza = [
     price: "$56",
   },
   {
-    id: 3,
+    id: 13,
     title: "Grab some pizza!",
     category: "pizza",
     image: pizza_3,
@@ -76,7 +76,7 @@ const pizza = [
 ];
 const salmon = [
   {
-    id: 1,
+    id: 21,
     title: "Hi, Salmon",
     category: "salmon",
     image: salmon_1,
@@ -84,7 +84,7 @@ const salmon = [
     price: "$60",
   },
   {
-    id: 2,
+    id: 22,
     title: "Hi, Salmon",
     category: "salmon",
     image: salmon_2,
@@ -92,7 +92,7 @@ const salmon = [
     price: "$60",
   },
   {
-    id: 3,
+    id: 23,
     title: "Hi, Salmon",
     category: "salmon",
     image: salmon_3,
@@ -102,7 +102,7 @@ const salmon = [
 ];
 const salads = [
   {
-    id: 1,
+    id: 31,
     title: "What's up,salad?",
     category: "salad",
     image: salad_1,
@@ -110,7 +110,7 @@ const salads = [
     price: "$60",
   },
   {
-    id: 2,
+    id: 32,
     title: "What's up,salad?",
     category: "salad",
     image: salad_2,
@@ -118,7 +118,7 @@ const salads = [
     price: "$60",
   },
   {
-    id: 3,
+    id: 33,
     title: "What's up,salad?",
     category: "salad",
     image: salad_3,
@@ -128,7 +128,7 @@ const salads = [
 ];
 const donuts = [
   {
-    id: 1,
+    id: 41,
     title: "How about a donut?",
     category: "donut",
     image: donut_1,
@@ -136,7 +136,7 @@ const donuts = [
     price: "$25",
   },
   {
-    id: 2,
+    id: 42,
     title: "How about a donut?",
     category: "donut",
     image: donut_2,
@@ -144,7 +144,7 @@ const donuts = [
     price: "$25",
   },
   {
-    id: 3,
+    id: 43,
     title: "How about a donut?",
     category: "donut",
     image: donut_3,
@@ -155,7 +155,7 @@ const donuts = [
 
 const drinks = [
   {
-    id: 1,
+    id: 51,
     title: "Do you wanna chill?",
     category: "drink",
     image: drink_1,
@@ -163,7 +163,7 @@ const drinks = [
     price: "$35",
   },
   {
-    id: 2,
+    id: 52,
     title: "Do you wanna chill?",
     category: "drink",
     image: drink_2,
@@ -171,7 +171,7 @@ const drinks = [
     price: "$35",
   },
   {
-    id: 3,
+    id: 53,
     title: "Do you wanna chill?",
     category: "drink",
     image: drink_3,

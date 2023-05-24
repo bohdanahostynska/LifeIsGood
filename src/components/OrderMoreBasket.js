@@ -1,15 +1,15 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import {
+  clearCategoryList,
   handleOrderMoreBasket,
-  clearResults,
 } from "../redux/reducers/categoryListSlice";
 import Stopwatch from "../assets/basket/stopwatch 1.svg";
 function OrderMoreBasket() {
-  const { isOpenBasket } = useSelector((state) => state.categoryList);
   const dispatch = useDispatch();
   const toggleOrderMoreBasket = () => {
-    dispatch(handleOrderMoreBasket(!isOpenBasket));
+    dispatch(clearCategoryList());
+    dispatch(handleOrderMoreBasket());
   };
 
   return (

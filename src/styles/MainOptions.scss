@@ -3,8 +3,8 @@
   position: sticky;
 
   &_list {
-    display: grid;
-    grid-template-columns: repeat(6, 100px);
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     cursor: pointer;
   }

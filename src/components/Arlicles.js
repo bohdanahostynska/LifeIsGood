@@ -10,12 +10,10 @@ import Chicken from "../assets/menu/all_pic/articles/grilled-chicken.svg";
 import Face from "../assets/menu/all_pic/articles/face.svg";
 import Cookies from "../assets/menu/all_pic/articles/cookies.svg";
 import Pizza from "../assets/menu/all_pic/articles/favorite-pizza.svg";
-import TopSearch from "./TopSearch";
 
 function Arlicles() {
   return (
     <div className="articles_content">
-      <TopSearch />
       <Discount />
       <div className="articles_main">
         <div className="articles_top">
