@@ -23,8 +23,8 @@ function MainPage() {
             {isOpenBasket && <Basket />}
             {isOpenOrderMoreBasket && <OrderMoreBasket />}
           </div>
-          <Articles />
         </div>
+        <Articles />
       </div>
     </div>
   );

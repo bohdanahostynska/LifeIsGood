@@ -9,11 +9,13 @@ function Discount() {
     <div className="articles_header">
       <h3 className="articles_discount">-50% Off</h3>
       <p className="articles_text">the full price of burgers</p>
-      <img className="articles_img_frst" src={Apple} alt="art_image" />
-      <img className="articles_img_sec" src={Cheese} alt="art_image" />
-      <img className="articles_img_thrd" src={Flame} alt="art_image" />
-      <img className="articles_img_fth" src={Orange} alt="art_image" />
-      <img className="articles_img_fifth" src={Burger} alt="art_image" />
+      <div className="articles_images">
+        <img className="articles_img_frst" src={Apple} alt="art_image" />
+        <img className="articles_img_sec" src={Cheese} alt="art_image" />
+        <img className="articles_img_thrd" src={Flame} alt="art_image" />
+        <img className="articles_img_fth" src={Orange} alt="art_image" />
+        <img className="articles_img_fifth" src={Burger} alt="art_image" />
+      </div>
     </div>
   );
 }

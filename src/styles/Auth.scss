@@ -1,36 +1,32 @@
 .form_container {
-  max-width: 1800px;
   margin: 0 auto;
   background-color: #deebfb;
-  padding-top: 101px;
-  padding-bottom: 110px;
+  padding-bottom: 140px;
   display: flex;
   flex-direction: column;
   position: relative;
 
+  .form_images_top {
+    display: flex;
+    justify-content: space-around;
+  }
+
   .form_img_1 {
-    position: absolute;
-    width: 200px;
-    left: 10%;
-    top: 10%;
+    width: 80px;
   }
   .form_img_2 {
-    position: absolute;
-    width: 200px;
-    right: 10%;
-    top: 10%;
+    width: 80px;
+  }
+
+  .form_images {
+    display: flex;
+    justify-content: space-around;
   }
   .form_img_3 {
-    position: absolute;
-    width: 200px;
-    left: 15%;
-    bottom: 10px;
+    width: 80px;
   }
   .form_img_4 {
-    position: absolute;
-    width: 200px;
-    right: 10%;
-    bottom: 10px;
+    width: 80px;
   }
   .form_header {
     text-align: center;
@@ -46,21 +42,22 @@
     line-height: 65px;
     display: flex;
     margin: 0 auto;
-    margin-left: 20px;
   }
   .drooling-face {
     display: inline-block;
-    margin-right: 40px;
   }
   .form_content {
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
     background-color: white;
     border-radius: 35px;
-    padding-top: 76px;
-    padding-bottom: 57px;
     align-items: center;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
   }
   .form_label {
     display: block;
@@ -68,22 +65,24 @@
   }
 
   .form_input {
-    width: 388px;
-    height: 50px;
+    max-width: 420px;
+    padding: 20px 100px 20px 10px;
     border-radius: 35px;
     border: none;
     background: #f3f3f3;
-    padding-left: 14px;
     margin-top: 5px;
   }
 
   .form_wrap {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     text-align: start;
     margin-left: 70px;
     margin-right: 70px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .form_name {

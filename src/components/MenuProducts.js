@@ -3,7 +3,6 @@ import UserItem from "./UserItem";
 import DeliveryGuy from "./DeliveryGuy";
 import MainPage from "./MainPage";
 import { Icon } from "../icons";
-import Header from "./Header";
 
 const list = [
   {
@@ -45,36 +44,48 @@ export const MenuProducts = () => {
   return (
     <div className="container">
       <div className="wrapper">
-        <div className="features">
-          <UserItem />
-          <nav className="menu">
-            <ul className="menu__list">
-              {list.map(({ title, name, svgName, link }) => {
-                return (
-                  <li
-                    key={name}
-                    style={{ listStyle: "none" }}
-                    className={
-                      activeItem.name === name
-                        ? "menu-link menu-link-active"
-                        : "menu-link"
-                    }
-                    onClick={() => click(name)}
-                  >
-                    <div className="menu-link-icon">
-                      <Icon name={svgName} />
-                    </div>
-                    <span>{title}</span>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
-          <DeliveryGuy />
+        {/* <div className="features"> */}
+        <div className="menu_adaptive">
+          <input checked type="checkbox" className="checkbox" id="" />
+          <div className="check-content">
+            <div className="check"></div>
+            <div className="check"></div>
+            <div className="check"></div>
+            <div className="check"></div>
+          </div>
+          <div className="menu_all">
+            <nav className="menu">
+              <ul className="menu__list">
+                <UserItem />
+                {list.map(({ title, name, svgName, link }) => {
+                  return (
+                    <li
+                      key={name}
+                      style={{ listStyle: "none" }}
+                      className={
+                        activeItem.name === name
+                          ? "menu-link menu-link-active"
+                          : "menu-link"
+                      }
+                      onClick={() => click(name)}
+                    >
+                      <div className="menu-link-icon">
+                        <Icon name={svgName} />
+                      </div>
+                      <span>{title}</span>
+                    </li>
+                  );
+                })}
+              </ul>
+              <DeliveryGuy />
+            </nav>
+            <div></div>
+          </div>
         </div>
         <MainPage />
       </div>
     </div>
+    // </div>
   );
 };
 export default MenuProducts;

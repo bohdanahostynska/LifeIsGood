@@ -42,16 +42,16 @@ function Auth() {
     <>
       {loading && <Loader />}
       <div className="form_container">
+        <div className="form_images_top">
+          <img className="form_img_1" src={grapes} alt="form" />
+          <img className="form_img_2" src={leaf} alt="form" />
+        </div>
         <div className="form_header">
           <h2 className="main_title">Welcome To Yelp App</h2>
           <img className="drooling-face" src={Drooling} alt="drooling" />
         </div>
         <div className="form_content">
           <form className="form_wrap" onSubmit={handleSignIn}>
-            <img className="form_img_1" src={grapes} alt="form" />
-            <img className="form_img_2" src={leaf} alt="form" />
-            <img className="form_img_3" src={apple} alt="form" />
-            <img className="form_img_4" src={orange} alt="form" />
             <span className="form_name">Login</span>
             <Input
               label="email"
@@ -80,6 +80,10 @@ function Auth() {
               don't have an account
             </li>
           </form>
+        </div>
+        <div className="form_images">
+          <img className="form_img_3" src={apple} alt="form" />
+          <img className="form_img_4" src={orange} alt="form" />
         </div>
       </div>
     </>
