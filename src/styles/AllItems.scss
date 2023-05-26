@@ -121,12 +121,13 @@
   }
   &_tick {
     border: none;
-    background-color: #f3f3f3;
+    position: absolute;
     border-bottom-right-radius: 10px;
-    width: 12px;
-    height: 12px;
-    padding: 9px;
-    padding-bottom: 12px;
-    margin-bottom: 2px;
+    box-shadow: 0px 4px 46px rgba(0, 0, 0, 0.03);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    right: 11%;
+    bottom: 13px;
   }
 }

@@ -16,15 +16,19 @@ function MainPage() {
     <div className="main_page">
       <Header />
       <div className="main_content">
-        <div className="main_list">
-          <MainOptions currentFilter={filter} setFilter={setFilter} />
-          <div className="main_bottom">
-            <AllItems currentFilter={filter} />
-            {isOpenBasket && <Basket />}
-            {isOpenOrderMoreBasket && <OrderMoreBasket />}
+        <div className="main_left">
+          <div className="main_list">
+            <MainOptions currentFilter={filter} setFilter={setFilter} />
+            <div className="main_bottom">
+              <AllItems currentFilter={filter} />
+              {isOpenBasket && <Basket />}
+              {isOpenOrderMoreBasket && <OrderMoreBasket />}
+            </div>
           </div>
         </div>
-        <Articles />
+        <div className="main-right">
+          <Articles />
+        </div>
       </div>
     </div>
   );

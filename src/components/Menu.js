@@ -20,14 +20,14 @@ const list = [
   },
   {
     id: 3,
-    title: "Trendng",
+    title: "Trending",
     name: "Trend",
     svgName: "flame",
     link: "",
   },
   {
     id: 4,
-    title: "Setting",
+    title: "Settings",
     name: "Setting",
     svgName: "setting",
     link: "",
@@ -70,7 +70,7 @@ export const Menu = () => {
           <DeliveryGuy />
           <button
             className="burger-btn"
-            onClick={() => setOpenMobileMenu((ps) => !ps)}
+            onClick={() => setOpenMobileMenu((prev) => !prev)}
           >
             {!openMobileMenu ? "" : ""}
             <span></span>

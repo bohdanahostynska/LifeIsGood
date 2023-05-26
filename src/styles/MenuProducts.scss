@@ -81,19 +81,6 @@
   }
 }
 
-.check {
-  width: 50px;
-  height: 5px;
-  background-color: black;
-}
-.check:not(:last-of-type) {
-  margin-bottom: 5px;
-}
-
-.checkbox,
-.check-content {
-  display: none;
-}
 .guy {
   display: inline-block;
 
@@ -108,10 +95,6 @@
   .container {
     max-width: 800px;
   }
-  .checkbox,
-  .check-content {
-    display: block;
-  }
 
   .user_wrapper {
     margin: 0;
@@ -125,12 +108,13 @@
   }
 
   .burger-btn {
-    width: 32px;
-    height: 1px;
+    width: 30px;
+    height: 4px;
     margin-left: 29px;
     margin-top: 15px;
     position: relative;
     background-color: rgb(11, 11, 11);
+    border: none;
     cursor: pointer;
 
     &:before {
@@ -168,7 +152,7 @@
   .menu {
     display: flex;
     margin: 0;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     $m: &;
 
@@ -200,9 +184,9 @@
       position: fixed;
       bottom: 0;
       right: -204px;
-      height: calc(100vh - 97px);
+      height: calc(100vh - 92px);
       background-color: #deebfb;
-      padding: 10px;
+      padding: 20px;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
@@ -218,61 +202,5 @@
     position: relative;
     margin: 0 auto;
     display: flex;
-  }
-
-  .check {
-    transition: 300ms;
-  }
-  .checkbox {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    margin: 0;
-    top: 0;
-    right: 0;
-    opacity: 0;
-    z-index: 2005;
-  }
-  .checkbox:checked ~ .check-content > .check:first-of-type {
-    transform: rotate(45deg) translate(17px, 8px);
-  }
-  .checkbox:checked ~ .check-content > .check:nth-of-type(2) {
-    opacity: 0;
-  }
-  .checkbox:checked ~ .check-content > .check:nth-of-type(3) {
-    transform: rotate(-45deg) translate(4px, 2px);
-  }
-  .checkbox:checked ~ .check-content > .check:last-of-type {
-    opacity: 0;
-  }
-  .checkbox:checked ~ .menu_all {
-    display: block;
-    position: fixed;
-    background-color: #bcccdf;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    padding-top: 40px;
-    z-index: 1000;
-  }
-  .checkbox:checked ~ .user_wrapper {
-    display: block;
-    position: fixed;
-    background-color: #bcccdf;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    padding-top: 40px;
-    z-index: 1000;
-  }
-  .checkbox:checked ~ .menu_all {
-    display: none;
-  }
-
-  .check-content {
-    z-index: 2002;
-    position: relative;
   }
 }
