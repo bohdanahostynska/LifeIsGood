@@ -3,89 +3,19 @@ import UserItem from "./UserItem";
 import DeliveryGuy from "./DeliveryGuy";
 import MainPage from "./MainPage";
 import { Icon } from "../icons";
-
-const list = [
-  {
-    id: 1,
-    title: "Home",
-    name: "Home",
-    svgName: "home",
-    link: "/home",
-  },
-  {
-    id: 2,
-    title: "Menu",
-    name: "Menu",
-    svgName: "menu",
-    link: "/menu",
-  },
-  {
-    id: 3,
-    title: "Trendng",
-    name: "Trend",
-    svgName: "flame",
-    link: "",
-  },
-  {
-    id: 4,
-    title: "Setting",
-    name: "Setting",
-    svgName: "setting",
-    link: "",
-  },
-];
+import Header from "./Header";
+import Menu from "./Menu";
 
 export const MenuProducts = () => {
-  const [activeItem, setActiveItem] = useState(list[0]);
-  const click = (name) => {
-    setActiveItem(list.find((x) => x.name === name));
-  };
-
   return (
     <div className="container">
       <div className="wrapper">
-        {/* <div className="features"> */}
-        <div className="menu_adaptive">
-          <input checked type="checkbox" className="checkbox" id="" />
-          <div className="check-content">
-            <div className="check"></div>
-            <div className="check"></div>
-            <div className="check"></div>
-            <div className="check"></div>
-          </div>
-          <div className="menu_all">
-            <nav className="menu">
-              <ul className="menu__list">
-                <UserItem />
-                {list.map(({ title, name, svgName, link }) => {
-                  return (
-                    <li
-                      key={name}
-                      style={{ listStyle: "none" }}
-                      className={
-                        activeItem.name === name
-                          ? "menu-link menu-link-active"
-                          : "menu-link"
-                      }
-                      onClick={() => click(name)}
-                    >
-                      <div className="menu-link-icon">
-                        <Icon name={svgName} />
-                      </div>
-                      <span>{title}</span>
-                    </li>
-                  );
-                })}
-              </ul>
-              <DeliveryGuy />
-            </nav>
-            <div></div>
-          </div>
+        <div className="features">
+          <Menu />
         </div>
         <MainPage />
       </div>
     </div>
-    // </div>
   );
 };
 export default MenuProducts;
