@@ -187,6 +187,11 @@
           padding: 50px 20px 0 10px;
         }
       }
+      .order_basket_body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
       .menu__list {
         box-sizing: content-box;
         top: 10%;
@@ -256,7 +261,7 @@
       .menu__list {
         box-sizing: content-box;
         padding-top: 30px;
-        top: 8%;
+        top: 13%;
       }
       .menu_all {
         box-sizing: unset;
@@ -278,13 +283,28 @@
       .menu__list {
         box-sizing: content-box;
         padding-top: 30px;
-        top: 6%;
+        top: 10%;
       }
       .articles_content {
         max-width: 220px;
       }
       .articles_wrap {
         width: 200px;
+      }
+    }
+    .order_basket_container {
+      top: 50px;
+      left: 2%;
+
+      .order_basket_content {
+        padding: 50px 0 0 10px;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+      .order_basket_body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
     }
   }
