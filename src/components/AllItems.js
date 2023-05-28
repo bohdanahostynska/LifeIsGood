@@ -1,7 +1,7 @@
 import React from "react";
 import Plus from "../assets/menu/all_pic/plus.svg";
 import Flame from "../assets/menu/all_pic/fire.svg";
-import Tick from "..//assets/menu/all_pic/tick.png";
+import Tick from "..//assets/menu/tick2.svg";
 import {
   createCategoryList,
   handleOpenBasket,

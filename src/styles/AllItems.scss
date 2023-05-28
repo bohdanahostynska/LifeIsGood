@@ -113,21 +113,20 @@
     width: 12px;
     height: 12px;
     padding: 8px;
+    position: relative;
   }
 
   &_plus {
     margin-bottom: 2px;
-    position: relative;
+    position: absolute;
   }
   &_tick {
-    border: none;
+    margin-bottom: 2px;
     position: absolute;
-    border-bottom-right-radius: 10px;
-    box-shadow: 0px 4px 46px rgba(0, 0, 0, 0.03);
+    background-color: #f2eeee;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    right: 11%;
-    bottom: 13px;
+    padding: 8px;
+    left: 0;
+    top: 0;
   }
 }

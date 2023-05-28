@@ -27,6 +27,7 @@ function Register() {
       goTo("/login");
     } catch (error) {
       const errorMessage = error.message;
+      alert("Something went wrong. Please, check your credentials");
       console.log(errorMessage);
     }
   };

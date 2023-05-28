@@ -43,7 +43,7 @@ export const Menu = () => {
   return (
     <>
       <div className="menu_all">
-        <nav className={`menu ${openMobileMenu ? "active" : ""}`}>
+        <nav className={`menu ${openMobileMenu ? "active" : "burger_change"}`}>
           <UserItem />
 
           <ul className="menu__list">
@@ -69,6 +69,8 @@ export const Menu = () => {
           </ul>
           <DeliveryGuy />
           <button
+            checked
+            type="checkbox"
             className="burger-btn"
             onClick={() => setOpenMobileMenu((prev) => !prev)}
           >

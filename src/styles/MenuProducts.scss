@@ -111,7 +111,7 @@
     width: 30px;
     height: 4px;
     margin-left: 29px;
-    margin-top: 15px;
+    margin-top: 14px;
     position: relative;
     background-color: rgb(11, 11, 11);
     border: none;
@@ -132,7 +132,7 @@
       width: 30px;
       height: 4px;
       left: 0;
-      margin-top: 7px;
+      margin-top: 8px;
       position: absolute;
       background-color: rgb(11, 11, 11);
       cursor: pointer;
@@ -148,6 +148,16 @@
       background-color: rgb(11, 11, 11);
       cursor: pointer;
     }
+  }
+
+  .burger_change .burger-btn:before {
+    opacity: 0;
+  }
+  .burger_change .burger-btn span {
+    transform: rotate(134deg) translate(2px, 1px);
+  }
+  .burger_change .burger-btn span:nth-child(2) {
+    transform: rotate(-134deg) translate(0, 0);
   }
   .menu {
     display: flex;

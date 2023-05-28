@@ -6,6 +6,7 @@ import Register from "./components/Register";
 import Home from "./components/Home";
 import { AuthContext } from "./context/AuthContext";
 import Loader from "./components/Loader";
+import { loading, setLoading } from "./redux/reducers/authSlice";
 
 const links = [
   { id: "1", link: "register" },
@@ -14,13 +15,20 @@ const links = [
   { id: "4", link: "menu" },
   { id: "5", link: "home" },
 ];
+const PrivateRoute = ({ children }) => {
+  let { currentUser } = React.useContext(AuthContext);
+
+  if (currentUser === null) {
+    return <Navigate to="/login" />;
+  }
+  return children;
+};
 
 const RouterApp = () => {
   const { currentUser } = React.useContext(AuthContext);
   return (
     <div className="container">
       <nav className="header_nav">
-        {/* <ul className="header-ul"> */}
         {links.map(({ id, link, name }) => (
           <li
             key={id}
@@ -40,12 +48,23 @@ const RouterApp = () => {
             </NavLink>
           </li>
         ))}
-        {/* </ul> */}
         <Routes>
           <Route path="/" element={<Register />} />
           <Route
             path="/login"
             element={currentUser ? <Navigate to="/menu" /> : <Auth />}
+          />
+          <Route
+            path="/login"
+            element={
+              <PrivateRoute>
+                <div className="loader_wrapper">
+                  {!loading && (
+                    <Loader loading={loading} setLoading={setLoading} />
+                  )}
+                </div>
+              </PrivateRoute>
+            }
           />
           <Route path="/loader" element={<Loader />} />
           <Route path="/menu" element={<MenuProducts />} />

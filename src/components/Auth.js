@@ -33,6 +33,8 @@ function Auth() {
         goTo("/menu");
       }, 4000);
     } catch (error) {}
+
+    alert("Something went wrong. Please, check your credentials");
   };
   const onClick = () => {
     navigate("/");
@@ -41,6 +43,7 @@ function Auth() {
   return (
     <>
       {loading && <Loader />}
+
       <div className="form_container">
         <div className="form_images_top">
           <img className="form_img_1" src={grapes} alt="form" />
