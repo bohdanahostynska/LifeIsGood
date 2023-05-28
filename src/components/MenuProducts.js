@@ -1,9 +1,5 @@
-import React, { useState } from "react";
-import UserItem from "./UserItem";
-import DeliveryGuy from "./DeliveryGuy";
+import React from "react";
 import MainPage from "./MainPage";
-import { Icon } from "../icons";
-import Header from "./Header";
 import Menu from "./Menu";
 
 export const MenuProducts = () => {

@@ -28,7 +28,7 @@ function AllItems({ currentFilter }) {
   return (
     <div className="all_items_content">
       {data.map((item) => {
-        const { title, category, image, text, price, id, index } = item;
+        const { title, category, image, text, price, id } = item;
         return (
           <div className="all_items_all" key={category + id}>
             <img className="all_items_img" src={image} alt="all_images" />
