@@ -33,8 +33,6 @@ function Auth() {
         goTo("/menu");
       }, 4000);
     } catch (error) {}
-
-    alert("Something went wrong. Please, check your credentials");
   };
   const onClick = () => {
     navigate("/");
