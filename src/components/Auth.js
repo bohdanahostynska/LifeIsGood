@@ -41,7 +41,6 @@ function Auth() {
   return (
     <>
       {loading && <Loader />}
-
       <div className="form_container">
         <div className="form_images_top">
           <img className="form_img_1" src={grapes} alt="form" />

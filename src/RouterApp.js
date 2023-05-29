@@ -15,14 +15,14 @@ const links = [
   { id: "4", link: "menu" },
   { id: "5", link: "home" },
 ];
-const PrivateRoute = ({ children }) => {
-  let { currentUser } = React.useContext(AuthContext);
+// const PrivateRoute = ({ children }) => {
+//   let { currentUser } = React.useContext(AuthContext);
 
-  if (currentUser === null) {
-    return <Navigate to="/login" />;
-  }
-  return children;
-};
+//   if (currentUser === null) {
+//     return <Navigate to="/login" />;
+//   }
+//   return children;
+// };
 
 const RouterApp = () => {
   const { currentUser } = React.useContext(AuthContext);
@@ -54,7 +54,7 @@ const RouterApp = () => {
             path="/login"
             element={currentUser ? <Navigate to="/menu" /> : <Auth />}
           />
-          <Route
+          {/* <Route
             path="/login"
             element={
               <PrivateRoute>
@@ -65,7 +65,7 @@ const RouterApp = () => {
                 </div>
               </PrivateRoute>
             }
-          />
+          /> */}
           <Route path="/loader" element={<Loader />} />
           <Route path="/menu" element={<MenuProducts />} />
           <Route path="/home" element={<Home />} />
