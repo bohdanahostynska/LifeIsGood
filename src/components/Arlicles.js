@@ -29,7 +29,7 @@ function Arlicles() {
                 <img
                   className="articles_icon_chicken"
                   src={Chicken}
-                  alt="icon"
+                  alt="Chicken"
                 />
               </div>
             </div>

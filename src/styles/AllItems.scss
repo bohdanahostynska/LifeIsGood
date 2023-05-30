@@ -21,7 +21,6 @@
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
   &_top {
     display: flex;
@@ -91,7 +90,7 @@
     font-size: 10px;
     line-height: 18px;
     color: #898686;
-    margin: 8px 0;
+    margin: 8px auto;
   }
 
   &_add {

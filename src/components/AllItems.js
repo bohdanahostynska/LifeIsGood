@@ -35,9 +35,7 @@ function AllItems({ currentFilter }) {
 
             <img className="all_items_image" src={Flame} alt="all_images" />
             <div className="all_items_bottom">
-              <h3 className="all_items_title">
-                {title} {id}
-              </h3>
+              <h3 className="all_items_title">{title}</h3>
               <p className="all_items_text">{text}</p>
               <div className="all_items_add">
                 <p className="all_items_price">{price}</p>

@@ -35,7 +35,7 @@ function Auth() {
     } catch (error) {}
   };
   const onClick = () => {
-    navigate("/register");
+    navigate("/");
   };
 
   return (

@@ -33,18 +33,18 @@ const burgers = [
   },
   {
     id: 2,
-    title: "Burger Wanted",
+    title: "Better Burger Bureau",
     category: "burger",
     image: burger_2,
-    text: "Take a bite and prepare for your mind to be blown away instantly!",
+    text: "You don't want to risk having trouble - better come here at once and buy our best burger!",
     price: "$29",
   },
   {
     id: 3,
-    title: "Burger Wanted",
+    title: "Burger Needed",
     category: "burger",
     image: burger_3,
-    text: "Take a bite and prepare for your mind to be blown away instantly!",
+    text: "There is nothing as good as our tuna burger!",
     price: "$29",
   },
 ];
@@ -59,10 +59,10 @@ const pizza = [
   },
   {
     id: 12,
-    title: "Grab some pizza!",
+    title: "Pizza hot at pizza spot!",
     category: "pizza",
     image: pizza_2,
-    text: "A huge slice of pizza is gonna make your day!",
+    text: "Yes,that's right! Try our pizza and you won't regret it!",
     price: "$56",
   },
   {
@@ -85,10 +85,10 @@ const salmon = [
   },
   {
     id: 22,
-    title: "Hi, Salmon",
+    title: "Me again",
     category: "salmon",
     image: salmon_2,
-    text: "Royal food at your service!Order our amazing salmon and feel like a king.",
+    text: "The best fish in our district.If you feel hungry then you are in the right place.",
     price: "$60",
   },
   {
