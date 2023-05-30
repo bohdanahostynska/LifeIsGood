@@ -111,10 +111,10 @@ const salads = [
   },
   {
     id: 32,
-    title: "What's up,salad?",
+    title: "Just delicious!",
     category: "salad",
     image: salad_2,
-    text: "Royal food at your service!Order our amazing salad and feel like a king.",
+    text: "Only fresh vegetables at your service! Enjoy your meal!",
     price: "$60",
   },
   {
