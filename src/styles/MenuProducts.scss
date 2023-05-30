@@ -10,7 +10,7 @@
     height: 70px;
     border-radius: 15px;
     background-color: #fff;
-
+    margin: 10px auto;
     padding-top: 7px;
     padding-left: 8px;
   }
@@ -113,7 +113,6 @@
     margin-left: 29px;
     margin-top: 14px;
     position: relative;
-    background-color: rgb(11, 11, 11);
     border: none;
     cursor: pointer;
 
@@ -150,11 +149,14 @@
     }
   }
 
-  .burger_change .burger-btn:before {
+  .burger_change .burger-btn::before {
+    opacity: 0;
+  }
+  .burger_change .burger-btn:after {
     opacity: 0;
   }
   .burger_change .burger-btn span {
-    transform: rotate(134deg) translate(2px, 1px);
+    transform: rotate(134deg) translate(1px, 1px);
   }
   .burger_change .burger-btn span:nth-child(2) {
     transform: rotate(-134deg) translate(0, 0);
@@ -163,7 +165,7 @@
     display: flex;
     margin: 0;
     justify-content: space-around;
-    width: 100%;
+    width: 90%;
     $m: &;
 
     &.active {

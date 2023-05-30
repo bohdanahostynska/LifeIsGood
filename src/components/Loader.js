@@ -10,15 +10,15 @@ function Loader() {
     <div className="loader_wrapper">
       <div className="loader_content">
         <div className="loader_images">
-          <img className="loader_image1" src={apple} alt="loader" />
-          <img className="loader_image3" src={cheese} alt="loader" />
-          <img className="loader_image4" src={flame} alt="loader" />
-          <img className="loader_image5" src={burger} alt="loader" />
-          <img className="loader_image6" src={orange} alt="loader" />
+          <img className="loader_image1" src={apple} alt="apple" />
+          <img className="loader_image3" src={cheese} alt="cheese" />
+          <img className="loader_image4" src={flame} alt="flame" />
+          <img className="loader_image5" src={burger} alt="burger" />
         </div>
         <h2 className="loader_title">Yelp App</h2>
         <p className="loader_text">developed by Bohdana Hostynska</p>
-        <img className="loader_image2" src={grapes} alt="loader" />
+        <img className="loader_image2" src={grapes} alt="grapes" />
+        <img className="loader_image6" src={orange} alt="orange" />
       </div>
     </div>
   );

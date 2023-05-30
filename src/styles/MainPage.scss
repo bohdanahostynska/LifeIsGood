@@ -11,11 +11,11 @@
   flex-direction: column;
   width: 100%;
   margin-right: 30px;
+  padding-left: 10px;
 
   .main_content {
     display: flex;
     .main_list {
-      // height: calc(100% - 200px);
       height: fit-content;
       margin-bottom: 10px;
     }

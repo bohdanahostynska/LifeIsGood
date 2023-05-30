@@ -35,7 +35,7 @@ function Auth() {
     } catch (error) {}
   };
   const onClick = () => {
-    navigate("/");
+    navigate("/register");
   };
 
   return (
@@ -47,7 +47,7 @@ function Auth() {
           <img className="form_img_2" src={leaf} alt="form" />
         </div>
         <div className="form_header">
-          <h2 className="main_title">Welcome To Yelp App</h2>
+          <h2 className="main_title-form">Welcome To Yelp App</h2>
           <img className="drooling-face" src={Drooling} alt="drooling" />
         </div>
         <div className="form_content">

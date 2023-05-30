@@ -6,7 +6,7 @@
   z-index: 1500;
   opacity: 0.33;
   margin: 0 auto;
-  padding-bottom: 157px;
+  padding-bottom: 257px;
 
   .loader_content {
     align-items: center;
@@ -54,7 +54,10 @@
   width: 100px;
 }
 .loader_image6 {
-  width: 42px;
+  width: 52px;
+  position: absolute;
+  right: 40%;
+  bottom: 30%;
 }
 a {
   pointer-events: none;

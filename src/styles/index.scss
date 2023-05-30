@@ -1,3 +1,18 @@
+body {
+  overflow-x: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Spartan", sans-serif;
+}
+body {
+  background: #deebfb;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  -ms-tap-highlight-color: transparent;
+}
 @import "./AllItems.scss";
 @import "./Articles.scss";
 @import "./Auth.scss";

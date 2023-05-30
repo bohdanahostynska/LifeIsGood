@@ -45,9 +45,8 @@ export const Menu = () => {
       <div className="menu_all">
         <nav className={`menu ${!openMobileMenu ? "active" : "burger_change"}`}>
           <UserItem />
-
           <ul className="menu__list">
-            {list.map(({ title, name, svgName, link }) => {
+            {list.map(({ title, name, svgName }) => {
               return (
                 <li
                   key={name}

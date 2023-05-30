@@ -17,17 +17,33 @@
       }
 
       .basket_container {
-        top: 50px;
+        top: 65px;
         right: 5.9%;
       }
       .order_basket_container {
         top: 50px;
         right: 5.9%;
         padding: 50px 20px;
+        border-radius: 20px 20px 20px 20px;
       }
       .menu__list {
         padding-top: 30px;
       }
+    }
+    .form_input {
+      max-width: 300px;
+      padding: 10px 50px 10px 10px;
+    }
+    .form_wrap {
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+    .form_header {
+      max-width: 300px;
+    }
+    .main_title-form {
+      font-size: 36px;
+      line-height: 55px;
     }
   }
 }
@@ -55,6 +71,10 @@
           background-color: rgb(182, 182, 208);
         }
       }
+      .order_basket_container {
+        top: 120px;
+        right: 6%;
+      }
     }
   }
 }
@@ -68,9 +88,9 @@
     }
 
     .order_basket_container {
-      top: 50px;
-      right: 7%;
-      margin-top: 50px;
+      top: 100px;
+      right: 6%;
+
       margin-right: 10px;
     }
   }
@@ -154,6 +174,7 @@
     margin: 0 auto;
     max-width: 100%;
     .wrapper {
+      padding-top: 100px;
       border-top-right-radius: 35px;
       .header_left {
         text-align: start;
@@ -171,7 +192,7 @@
         align-items: flex-start;
       }
       .basket_container {
-        top: 50px;
+        top: 70px;
         left: 2%;
       }
       .articles_img_fifth {
@@ -180,8 +201,8 @@
         left: 17%;
       }
       .order_basket_container {
-        top: 50px;
-        left: 2%;
+        top: 100px;
+        left: 6%;
 
         .order_basket_content {
           padding: 50px 20px 0 10px;
@@ -212,39 +233,69 @@
       }
     }
   }
+
+  .form_input {
+    max-width: 200px;
+  }
+  .form_wrap {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .form_content {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 @media screen and (max-width: 480px) {
   .container {
-    .user_wrapper {
-      align-items: center;
-      padding: 10px 1px;
+    .wrapper {
+      padding-top: 100px;
+      .user_wrapper {
+        align-items: center;
+        padding: 10px 1px;
+      }
+      .user_name {
+        text-align: start;
+        max-width: 95px;
+      }
+      .header_left {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .basket_container {
+        top: 80px;
+        left: 2%;
+      }
+      .drooling-face {
+        max-width: 100%;
+        width: 64px;
+        height: 66px;
+      }
+      .header_title {
+        max-width: 100%;
+      }
+      .menu__list {
+        box-sizing: content-box;
+        padding-top: 30px;
+        top: 11%;
+      }
+      .menu_all {
+        box-sizing: content-box;
+        width: 100%;
+      }
     }
-    .user_name {
-      text-align: start;
-      max-width: 90px;
+    .form_input {
+      max-width: 200px;
     }
-    .header_left {
-      max-width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .form_wrap {
+      margin-left: 20px;
+      margin-right: 20px;
     }
-    .drooling-face {
-      max-width: 100%;
-      width: 64px;
-      height: 66px;
-    }
-    .header_title {
-      max-width: 100%;
-    }
-    .menu__list {
-      box-sizing: content-box;
-      padding-top: 30px;
-      top: 11%;
-    }
-    .menu_all {
-      box-sizing: content-box;
-      width: 100%;
+    .form_content {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }
@@ -254,6 +305,9 @@
       max-width: 100%;
       .header {
         margin: 10px 10px;
+      }
+      .drooling-face {
+        display: none;
       }
       .header_title {
         max-width: 100%;
@@ -280,10 +334,13 @@
         max-width: 100%;
         margin: auto;
       }
+      .drooling-face {
+        display: none;
+      }
       .menu__list {
         box-sizing: content-box;
-        padding-top: 30px;
-        top: 10%;
+        padding-top: 20px;
+        top: 12%;
       }
       .articles_content {
         max-width: 220px;
@@ -306,6 +363,15 @@
         flex-direction: column;
         align-items: center;
       }
+    }
+  }
+}
+@media screen and (max-width: 280px) {
+  .container {
+    .menu__list {
+      box-sizing: content-box;
+      padding-top: 20px;
+      top: 9%;
     }
   }
 }
