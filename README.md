@@ -20,5 +20,5 @@ At  Yelp App, your satisfaction is our utmost priority. We strive to provide you
 🌟 Discover the Future of Fine Dining Today! 🌟
 Visit our website, Yelp App, and embark on an extraordinary culinary journey. Treat yourself, your loved ones, or even host a virtual gathering with our exquisite online dining experience. Join the ranks of our satisfied customers who have unlocked a world of flavors, convenience, and joy.
 
-Indulge in  Yelp Appand experience the epitome of culinary excellence, right from the comfort of your own home. Elevate your dining adventures and savor the artistry of our chefs. Order now and let us bring the world of gastronomy to you!
+Indulge in  Yelp App and experience the epitome of culinary excellence, right from the comfort of your own home. Elevate your dining adventures and savor the artistry of our chefs. Order now and let us bring the world of gastronomy to you!
 
