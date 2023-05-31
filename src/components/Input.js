@@ -1,18 +1,26 @@
 import React from "react";
 
-function Input({ label, placeholder, name, type = "text", value, onChange }) {
+export const Input = ({
+  name,
+  value,
+  handleChange,
+  handleBlur,
+  errors,
+  touched,
+}) => {
+  const inputType = name === "login" ? "email" : "password";
   return (
-    <label className="form_label">
+    <>
       <input
         className="form_input"
-        type={type}
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
         name={name}
+        placeholder={`Your ${name}`}
+        onChange={handleChange}
+        type={inputType}
+        onBlur={handleBlur}
       />
-    </label>
+      {touched && errors ? <span className="errors">{errors}</span> : null}
+    </>
   );
-}
-
+};
 export default Input;

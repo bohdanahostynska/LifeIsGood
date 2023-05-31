@@ -1,6 +1,11 @@
 .main_options {
   z-index: 99;
   position: sticky;
+  margin-bottom: 46px;
+
+  @media screen and (max-width: 1250px) {
+    margin: 16px 0;
+  }
 
   &_list {
     display: flex;

@@ -1,46 +1,73 @@
-import React from "react";
-import Input from "./Input";
-import { useInput } from "../hooks/useInput";
+import React, { useContext } from "react";
+import { Input } from "./Input";
 import Drooling from "../assets/menu/drooling-face.svg";
 import apple from "../assets/login/bitten-apple.svg";
 import grapes from "../assets/login/grapes.svg";
 import leaf from "../assets/login/leaf 2.svg";
 import orange from "../assets/login/orange.svg";
+import { useSelector } from "react-redux";
 import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
 import { useNav } from "../hooks/useNav";
-import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import Loader from "../components/Loader";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { setLoading } from "../redux/reducers/authSlice";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { AuthContext } from "../context/AuthContext";
 
 function Auth() {
-  const email = useInput();
-  const pass = useInput();
   const auth = getAuth();
   const navigate = useNavigate();
-  const { goTo } = useNav();
   const dispatch = useDispatch();
   const { loading } = useSelector((state) => state.auth);
 
-  const handleSignIn = async (event) => {
-    event.preventDefault();
-    try {
-      dispatch(setLoading(true));
-      await signInWithEmailAndPassword(auth, email.value, pass.value);
-      setTimeout(() => {
-        dispatch(setLoading(false));
-        goTo("/menu");
-      }, 4000);
-    } catch (error) {}
-  };
-  const onClick = () => {
-    navigate("/");
-  };
+  const { setCurrentUser } = useContext(AuthContext);
+  const { goTo } = useNav();
 
+  const { handleSubmit, handleChange, values, handleBlur, touched, errors } =
+    useFormik({
+      initialValues: {
+        login: "",
+        password: "",
+      },
+      validationSchema: Yup.object({
+        login: Yup.string()
+          .max(30, "Login mus be shorter than 30 characters")
+          .required(),
+        password: Yup.string()
+          .min(8, "Password must be longer than 8 characters")
+          .required(),
+      }),
+      onSubmit: async (values) => {
+        console.log(values);
+        await signInWithEmailAndPassword(
+          auth,
+          values.login,
+          values.password
+        ).then((userCredential) => {
+          const user = userCredential.user;
+
+          if (user) {
+            setCurrentUser(user);
+            localStorage.setItem("user", JSON.stringify(user));
+            dispatch(setLoading(true));
+
+            setTimeout(() => {
+              goTo("/menu");
+            }, 1000);
+          }
+        });
+      },
+    });
+
+  const inputData = ["login", "password"];
+
+  const onClick = () => {
+    navigate("/register");
+  };
+  console.log(loading);
   return (
     <>
-      {loading && <Loader />}
       <div className="form_container">
         <div className="form_images_top">
           <img className="form_img_1" src={grapes} alt="form" />
@@ -51,34 +78,22 @@ function Auth() {
           <img className="drooling-face" src={Drooling} alt="drooling" />
         </div>
         <div className="form_content">
-          <form className="form_wrap" onSubmit={handleSignIn}>
-            <span className="form_name">Login</span>
+          {inputData.map((item) => (
             <Input
-              label="email"
-              placeholder="Email"
-              name="email"
-              value={email.value}
-              onChange={email.onChange}
+              key={item}
+              name={item}
+              value={values[item]}
+              handleChange={handleChange}
+              handleBlur={handleBlur}
+              touched={touched[item]}
+              errors={errors[item]}
             />
-            <span className="form_name">Password</span>
-            <Input
-              label="password"
-              placeholder="************"
-              name="password"
-              type="password"
-              value={pass.value}
-              onChange={pass.onChange}
-            />
-            <button className="button" type="submit">
+          ))}
+          <form className="form_wrap" onSubmit={handleSubmit}>
+            <button className="button" type="submit" disabled={loading}>
               Login
             </button>
-            <li
-              className="form_text"
-              onClick={onClick}
-              style={{ listStyle: "none" }}
-            >
-              don't have an account
-            </li>
+            <Link to="/register">don't have an account</Link>
           </form>
         </div>
         <div className="form_images">

@@ -6,6 +6,7 @@ import Register from "./components/Register";
 import Home from "./components/Home";
 import { AuthContext } from "./context/AuthContext";
 import Loader from "./components/Loader";
+import { useSelector } from "react-redux";
 
 const links = [
   { id: "1", link: "login" },
@@ -17,41 +18,24 @@ const links = [
 
 const RouterApp = () => {
   const { currentUser } = React.useContext(AuthContext);
+
   return (
     <div className="container">
-      <nav className="header_nav">
-        {links.map(({ id, link, name }) => (
-          <li
-            key={id}
-            className="nav_item"
-            style={{ listStyle: "none", textDecoration: "none" }}
-          >
-            <NavLink
-              className="nav_link"
-              style={({ isActive }) => {
-                return {
-                  backgroundColor: isActive ? "grey" : "transparent",
-                };
-              }}
-              to={link}
-            >
-              {name}
-            </NavLink>
-          </li>
-        ))}
+      <Loader />
+
+      <div className="content">
         <Routes>
           <Route path="/" element={<Auth />} />
           <Route
             path="login"
             element={currentUser ? <Navigate to="/menu" /> : <Auth />}
           />
-          <Route path="/loader" element={<Loader />} />
           <Route path="/register" element={<Register />} />
           <Route path="/menu" element={<MenuProducts />} />
           <Route path="/home" element={<Home />} />
           <Route path="*" element={<Navigate to="/register" />} />
         </Routes>
-      </nav>
+      </div>
     </div>
   );
 };

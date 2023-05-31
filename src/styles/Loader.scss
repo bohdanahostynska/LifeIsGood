@@ -1,12 +1,19 @@
 .loader_wrapper {
   background-color: #deebfb;
-  padding-top: 290px;
-  max-width: 1440px;
-  position: relative;
+  position: fixed;
   z-index: 1500;
-  opacity: 0.33;
   margin: 0 auto;
-  padding-bottom: 257px;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.active {
+    animation: show 4s linear;
+  }
 
   .loader_content {
     align-items: center;
@@ -65,4 +72,23 @@ a {
 
   pointer-events: visible;
   opacity: 1;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  10% {
+    opacity: 1;
+    pointer-events: visible;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: visible;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
 }

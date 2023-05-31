@@ -3,7 +3,9 @@
   max-width: 100%;
   display: flex;
   margin-right: 0;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
 
   &_left {
     display: flex;
@@ -14,6 +16,7 @@
     font-weight: 800;
     font-size: 48px;
     line-height: 65px;
+    text-align: left;
   }
   .drooling-face {
     display: inline-block;

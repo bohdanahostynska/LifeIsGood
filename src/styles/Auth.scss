@@ -1,10 +1,11 @@
 .form_container {
   margin: 0 auto;
   background-color: #deebfb;
-  padding-bottom: 140px;
   display: flex;
   flex-direction: column;
   position: relative;
+  height: 100vh;
+  justify-content: center;
 
   .form_images_top {
     display: flex;
@@ -56,8 +57,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 50px;
   }
   .form_label {
     display: block;
@@ -70,7 +70,7 @@
     border-radius: 35px;
     border: none;
     background: #f3f3f3;
-    margin-top: 5px;
+    margin-top: 10px;
   }
 
   .form_wrap {
@@ -99,7 +99,7 @@
     border-radius: 15px;
     margin-left: 110px;
     border: none;
-    margin: 2px auto;
+    margin: 5px auto;
   }
 
   .form_text {

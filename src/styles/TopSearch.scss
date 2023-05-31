@@ -1,14 +1,14 @@
 .top_nav {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 16px;
 }
 .top_search {
   width: 18px;
   height: 18px;
   border-radius: 15px;
   background: #f3f3f3;
-  margin-top: 18px;
-  margin-right: 30px;
   padding: 18px;
 }
 .top_basket {
@@ -17,7 +17,6 @@
   border-radius: 15px;
   background: #666666;
   padding: 18px;
-  margin-top: 18px;
   position: relative;
 }
 .basket_wrap {

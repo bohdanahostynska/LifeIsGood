@@ -109,19 +109,18 @@
 
   .burger-btn {
     width: 30px;
-    height: 4px;
-    margin-left: 29px;
-    margin-top: 14px;
+    height: 20px;
     position: relative;
     border: none;
     cursor: pointer;
+    background: transparent;
 
     &:before {
       content: "";
       width: 30px;
       height: 4px;
       left: 0;
-      margin-top: 16px;
+      top: 9px;
       position: absolute;
       background-color: rgb(11, 11, 11);
       cursor: pointer;
@@ -131,7 +130,7 @@
       width: 30px;
       height: 4px;
       left: 0;
-      margin-top: 8px;
+      top: 0;
       position: absolute;
       background-color: rgb(11, 11, 11);
       cursor: pointer;
@@ -142,35 +141,41 @@
       width: 30px;
       height: 4px;
       left: 0;
-      margin-top: 24px;
+      top: 18px;
       position: absolute;
       background-color: rgb(11, 11, 11);
       cursor: pointer;
     }
   }
 
-  .burger_change .burger-btn::before {
-    opacity: 0;
-  }
-  .burger_change .burger-btn:after {
-    opacity: 0;
-  }
-  .burger_change .burger-btn span {
-    transform: rotate(134deg) translate(1px, 1px);
-  }
-  .burger_change .burger-btn span:nth-child(2) {
-    transform: rotate(-134deg) translate(0, 0);
-  }
   .menu {
     display: flex;
     margin: 0;
-    justify-content: space-around;
-    width: 90%;
+    justify-content: space-between;
+    width: 100%;
     $m: &;
+    align-items: center;
 
     &.active {
       #{$m}__list {
         right: 0;
+      }
+
+      .burger-btn::before {
+        opacity: 0;
+      }
+      .burger-btn:after {
+        opacity: 0;
+      }
+      .burger-btn span {
+        transform: rotate(134deg);
+        left: 0;
+        top: 9px;
+      }
+      .burger-btn span:nth-child(2) {
+        transform: rotate(-134deg);
+        left: 0;
+        top: 9px;
       }
     }
 

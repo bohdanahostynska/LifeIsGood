@@ -3,7 +3,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     flex-wrap: wrap;
-    width: calc(100% - 100px);
     margin-inline: auto;
     margin-top: 50px;
     gap: 24px;
@@ -21,16 +20,16 @@
     cursor: pointer;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
   &_top {
     display: flex;
-    margin-left: 100px;
+    align-items: center;
   }
   &_toggle {
     display: block;
     width: 25px;
     height: 19px;
-    margin-top: 30px;
   }
   &_title-main {
     font-size: 24px;
