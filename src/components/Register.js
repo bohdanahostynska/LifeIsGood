@@ -81,10 +81,10 @@ function Register() {
             Register
           </button>
         </form>
-        <div className="form_images">
-          <img className="form_img_3" src={apple} alt="form" />
-          <img className="form_img_4" src={orange} alt="form" />
-        </div>
+      </div>
+      <div className="form_images">
+        <img className="form_img_3" src={apple} alt="form" />
+        <img className="form_img_4" src={orange} alt="form" />
       </div>
     </div>
   );
