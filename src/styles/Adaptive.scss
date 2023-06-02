@@ -338,6 +338,11 @@
         top: 13%;
       }
     }
+    .form_input {
+      max-width: 150px;
+      width: 100%;
+      padding: 10px 50px 10px 10px;
+    }
   }
 }
 @media screen and (max-width: 320px) {
@@ -382,7 +387,7 @@
       }
     }
     .form_input {
-      max-width: 140px;
+      max-width: 130px;
       width: 100%;
     }
     .form_content {
